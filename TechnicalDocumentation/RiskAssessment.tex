@@ -1,0 +1,84 @@
+\chapter{Análisis y gestión de riesgos}
+\iffalse
+  \section{Definición y clasificación}
+    \paragraph{Los objetivos de la gestión de riesgos son identificar, controlar y eliminar las fuentes de riesgo antes de que empiecen a afectar el cumplimiento de los objetivos del proyecto.}
+    \paragraph{El riesgo siempre implica una incertidumbre y una pérdida potencial, es necesario llevar una cuantificación de estos parametros, por lo que suelen ser clasificados en diferentes categorias por ejemplo:}
+    \begin{itemize}
+      \item Riesgos del proyecto
+      \item Riesgos técnicos
+      \item Riesgos de negocio
+    \end{itemize}
+    \paragraph{Es necesario llevar un proceso de administración de riesgos y planes de contingencia para poder controlar esos inesperados eventos. Primero se tienen que identificar los riesgos, considerando principalmente los más potenciales, posteriormente analizarlos y dandoles una prioridad, generar planes de contingencia para finalmente supervizarlos y actuar conforme a lo acordado.}
+    \paragraph{Los riesgos pueden ser clasificados respecto a estudios previos o con relación a la experiencia de trabajo que tengan los desarrolladores y analistas del proyecto, sin embargo, generalmente suelen asignarseles ciertas ponderaciones por convención, como se muestra a continuación:}
+    \begin{itemize}
+      \item Muy bajo ( < 10\% )
+      \item Bajo ( 10 - 25\% )
+      \item Moderado (25 - 50\% )
+      \item Alto (50 - 75\% )
+      \item Muy Alto ( > 75\% )
+    \end{itemize}
+    \paragraph{Todos los riesgos deben encontrarse también clasificados entre cualquiera de las cuatro valoraciones: Insignificante, Tolerable, Serio, Catastrófico; los planes de contingencia suelen ser desarrollados para aquellos riegos con probabilidad de moderada a muy alta considerando, tomando en cuenta un impacto serio o castastrófico.}
+    \paragraph{A lo largo del desarrollo de Ambienta2MX surgieron y surgirán eventos y sucesos inesperados que serán considerados como riesgos potenciales dependiendo el impacto que estos lleguen a tener.}
+    \paragraph{Dentro del proceso de planeación del proyecto se decidió delegar o depender de los servicios de terceros en cuanto a infraestructura física, esto implica que se disminuyen riesgos de instalación o mantenimiento a equipos de cómputo o redes computacionales.}
+    \paragraph{Sin embargo, esto nos deja a merced de nuestros proveedores de servicios. La siguiente tabla muestra los riesgos más significativos considerados a lo largo del desarrollo del proyecto y sus respectivos planes de acción.}
+    \newpage
+    \begin{table}[b!]
+    \centering
+      \begin{tabular}{|p{3cm}|lllll}
+        \hline
+        \multicolumn{5}{|c|}{{\bf Tabla de Riesgos}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{{\bf Descripcion}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Tipo de Riesgo}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Valoración}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Porcentaje}} & 
+          \multicolumn{1}{p{5cm}|}{{\bf Plan de acción}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{No disponibilidad de los servidores de Amazon} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Catastrófico} & 
+          \multicolumn{1}{p{2cm}|}{1\%} & 
+          \multicolumn{1}{p{5cm}|}{Migración parcial a servicios de hosting gratuitos como Heroku u Openshift.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Falta de presupuesto} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto} & 
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{25\%} & 
+          \multicolumn{1}{p{5cm}|}{Buscar un proceso de incubación en empresas como Apache, Eclipse y migrar la plataforma a servicios de hosting gratuitos como Heroku u Openshift.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Falta por razones personales de miembros del equipo} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto} &
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{25\%} & 
+          \multicolumn{1}{p{5cm}|}{Rediseñar y adaptar las tareas con nuevos integrantes y habilitar forma de trabajo remota considerando fines de semana.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Extinción de recursos de información} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto, Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Catastrófico} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Cambiar las reglas de negocio y buscar nuevas fuentes de información como SaaS y desplegar los módulos de estandarización nuevamente.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Necesidad de escalabilidad de la plataforma} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Definir el tipo de escalabilidad a usar dependiendo los recursos monetarios existentes.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Ataques de Denegación de Servicios (DoS)} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Tolerable} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Cambiar el tipo de dirección en los servidores de Amazon y agregar caché al sistema.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Adaptación a nuevos estandares} &
+          \multicolumn{1}{p{2cm}|}{Técnico} &
+          \multicolumn{1}{p{2cm}|}{Tolerabe} &
+          \multicolumn{1}{p{2cm}|}{15\%} &
+          \multicolumn{1}{p{5cm}|}{Rediseñar y extender la funcionalidad de la aplicación, dando soporte a ambos modelos de intercambio de datos.} \\ 
+        \hline
+      \end{tabular}
+      \caption{Analisis de Riesgos}
+      \label{Analisis de riesgos}
+    \end{table}
+    \clearpage
+\fi

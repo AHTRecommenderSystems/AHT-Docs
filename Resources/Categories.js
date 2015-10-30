@@ -1,51 +1,88 @@
-[
-{"id":1,"type":"kind","name":"Panes y Masas"},
-{"id":2,"type":"kind","name":"Pastas y pizza"},
-{"id":3,"type":"kind","name":"Bizcochos y Galletas"},
-{"id":4,"type":"kind","name":"Carnes y Aves"},
-{"id":5,"type":"kind","name":"Pescados y Mariscos"},
-{"id":6,"type":"kind","name":"Ensaladas"},
-{"id":7,"type":"kind","name":"Contenido alcoholico"},
-{"id":8,"type":"kind","name":"Salsas y Guarniciones"},
-{"id":9,"type":"kind","name":"Sopas y Cremas"},
-{"id":10,"type":"kind","name":"Arroces"},
-{"id":11,"type":"kind","name":"Legumbres y Guisos"},
-{"id":12,"type":"kind","name":"Tartas y Dulces"},
-{"id":13,"type":"kind","name":"Helados y Sorbetes"},
-{"id":14,"type":"kind","name":"Frutas y Otros postres"},
-{"id":15,"type":"kind","name":"Huevos y Lacteos"},
-{"id":16,"type":"kind","name":"Encurtidos y Conservas"},
-{"id":17,"type":"kind","name":"Postre"},
-{"id":18,"type":"kind","name":"Bebida"},
-{"id":19,"type":"kind","name":"Primeros platos"},
-{"id":20,"type":"kind","name":"Segundos platos"},
-{"id":21,"type":"kind","name":"Entradas"},
-{"id":22,"type":"kind","name":"Sopas"},
-{"id":23,"type":"kind","name":"Acompa\~namientos"},
-{"id":30,"type":"kind","name":"Botana"},
-{"id":31,"type":"flavour","name":"Dulce"},
-{"id":32,"type":"flavour","name":"Salado"},
-{"id":33,"type":"flavour","name":"Agrio"},
-{"id":34,"type":"flavour","name":"Amargo"},
-{"id":35,"type":"flavour","name":"Umami"},
-{"id":36,"type":"flavour","name":"Grasoso"},
-{"id":37,"type":"occasion","name":"Halloween"},
-{"id":38,"type":"occasion","name":"Navidad"},
-{"id":39,"type":"occasion","name":"San Valentin"},
-{"id":40,"type":"occasion","name":"Verano"},
-{"id":41,"type":"occasion","name":"Desayunos"},
-{"id":42,"type":"occasion","name":"Meriendas"},
-{"id":43,"type":"occasion","name":"Ocasion especial"}
-{"id":44,"type":"region","name":"Italiana"},
-{"id":45,"type":"region","name":"Mediterranea"},
-{"id":46,"type":"region","name":"Asiatica"},
-{"id":47,"type":"region","name":"Mexicana"},
-{"id":48,"type":"region","name":"Americana"},
-{"id":49,"type":"region","name":"Hindu"},
-{"id":50,"type":"region","name":"Francesa"},
-{"id":50,"type":"region","name":"Tailandesa"},
-{"id":50,"type":"region","name":"Cantonesa"},
-{"id":50,"type":"region","name":"Japonesa"},
-{"id":50,"type":"region","name":"China"},
-{"id":50,"type":"region","name":"Medio oriente"},
-]
+"id","type","name"
+1,"kind","Panes y masas"
+2,"kind","Pastas"
+3,"kind","Bizcochos y galletas"
+4,"kind","Carnes"
+4,"kind","Aves"
+5,"kind","Pescados y mariscos"
+6,"kind","Ensaladas"
+7,"kind","Contenido alcoholico"
+8,"kind","Salsas y guarniciones"
+9,"kind","Sopas y cremas"
+10,"kind","Arroces"
+11,"kind","Legumbres y guisos"
+12,"kind","Tartas y Dulces"
+13,"kind","Helados y Sorbetes"
+14,"kind","Frutas y verduras"
+15,"kind","Huevos y lacteos"
+16,"kind","Encurtidos y conservas"
+17,"kind","Postre"
+18,"kind","Bebida"
+19,"kind","Primeros platos"
+20,"kind","Segundos platos"
+21,"kind","Entradas"
+22,"kind","Sopas y cremas"
+24,"kind","Acompa\~namientos"
+25,"kind","Emparedados"
+26,"kind","Botana"
+27,"flavour","Dulce"
+28,"flavour","Salado"
+29,"flavour","Agrio"
+30,"flavour","Amargo"
+31,"flavour","Umami"
+32,"flavour","Grasoso"
+82,"flavour","Picante"
+33,"occasion","Halloween"
+34,"occasion","Navidad"
+35,"occasion","San Valentin"
+36,"occasion","Primavera"
+37,"occasion","Verano"
+38,"occasion","Otono"
+39,"occasion","Invierno"
+40,"occasion","Desayunos"
+41,"occasion","Meriendas"
+42,"occasion","Ocasion especial"
+43,"region","Italiana"
+44,"region","Mediterranea"
+45,"region","Asiatica"
+46,"region","Mexicana"
+47,"region","Americana"
+48,"region","Hindu"
+49,"region","Francesa"
+50,"region","Tailandesa"
+51,"region","Cantonesa"
+52,"region","Japonesa"
+53,"region","China"
+54,"region","Medio oriente"
+55,"region","Alemana"
+56,"region","Argentina"
+57,"region","Brasile\~na"
+58,"region","Colombiana"
+59,"region","Coreana"
+60,"region","Cubana"
+61,"region","Espa\~nola"
+62,"region","Finlandesa"
+63,"region","Griega"
+64,"region","Holandesa"
+65,"region","Indonesa"
+66,"region","Portuguesa"
+67,"health","Bajas en colesterol"
+68,"health","Diabeticos"
+69,"health","Sin lactosa"
+70,"health","Celiacos"
+71,"health","Alergicos"
+72,"health","Bajar de peso"
+73,"health","Vegetarianos"
+74,"temperature","Frio"
+75,"temperature","Templado"
+76,"temperature","Caliente"
+77,"people","Bebes"
+78,"people","Ni\~nos"
+79,"people","Adultos"
+80,"people","Familiares"
+81,"people","Adultos mayores"
+83,"texture","Liquidas"
+84,"texture","Blandas"
+85,"texture","Semi-blandas"
+86,"texture","Duras"
+87,"texture","Crujientes"

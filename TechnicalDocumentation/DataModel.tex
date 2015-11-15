@@ -1,8 +1,8 @@
 \clearpage
-\chapter{Modelo de Datos}
+\section{Modelo de Datos}
 
-\section{Justificación}
-\paragraph{Para la aplicación final, se hará uso de un modelo de base de datos orientado a grafos. También se contará con un esquema no relacional, es decir, se carece de una normalización definida, perteneciente a la categoria NoSQL.}
+\subsection{Justificación}
+\paragraph{Para la aplicación final, se hará uso de un modelo de base de datos orientado a grafos. También se contará con un esquema perteneciente a la categoria NoSQL.}
 \paragraph{ Las características de una base de datos NoSQL son las siguientes: }
 
 \begin{itemize}
@@ -21,10 +21,9 @@
 
 \paragraph{Empresas cómo Foursquare, Google, Amazon, Uber o Twitter, han optado por complementar la información que persisten de forma relacional con modelos orientados a documentos usando tecnologías como Hbase, MongoDB, BigTable, DynamoDB, por citar algunos ejemplos.}
 
-\section{Descripción}
-\paragraph{Considerando la problematica y solución que plantea el equipo de Ambienta2MX, se ha optado por orientar el sistema a consultas usando documentos como modelo de datos base. }
+\subsection{Descripción}
 
-\paragraph{La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en practicamente cualquier tipo de articulos, peliculas, platillos, libros, entre otros como podemos ver en el siguiente diagrama de grafos.}
+\paragraph{Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Articulos a recomendar, y Categorias como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en practicamente cualquier tipo de articulos, peliculas, platillos, libros, entre otros como podemos ver en el siguiente diagrama de grafos.}
 
 \newpage
     \begin{landscape}
@@ -36,37 +35,5 @@
     \end{landscape}
   \newpage
 
-\paragraph{Los documentos serán almacenados considerando los datos definidos en la especificación JSON Data Interchange Format (en su versión 2013). \cite{16}}
 
-\paragraph{Se ha considerado el uso de el formato antes mencionado debido a su facilidad de lectura e integración con otro tipo de plataformas y lenguajes de programación, actualmente es el formato que rige el manejo de API de tipo REST.}
-
-\paragraph{Dentro del modelo de la aplicación final se toma en cuenta el modelo general mínimo necesario para trabajar la información añadiendo información relevante. Considerando al final los siguientes documentos.}
-
-\begin{itemize}
-  \item Platillos
-  \item Usuarios
-  \item Restaurantes
-  \item Categorias 
-\end{itemize}
-
-\paragraph{Para la información de los restaurantes, el modelo  permitirá almacenar la fuente de información externa en caso de ser utilizada para obtener datos adicionales a los que se poseen en la base de datos de acuerdo a registros como los contenidos por Foursquare en su API para la búsqueda de restaurantes.}
-
-\paragraph{Las relaciones posibles entre los elementos Usuario, Restaurante, Platillo y sus posibles Categorias son visualizados en el siguiente diagrama.}
-
-\newpage
-    \begin{landscape}
-      \begin{figure}[h!]
-      \centering
-      \includegraphics[width=22.5cm,height=12cm]{./images/Modelo_datos.jpg}
-      \caption{Modelo propuesto para el caso de estudio}
-    \end{figure}
-    \end{landscape}
-  \newpage
-
-\newpage
-\subsection{Modelo de datos}
-  \lstinputlisting[language=Javascript]{../Resources/Model.js} 
-
-\subsection{Categorias propuestas}
-  \lstinputlisting[language=Javascript]{../Resources/Categories.js} 
 

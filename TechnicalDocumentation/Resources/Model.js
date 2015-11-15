@@ -9,7 +9,7 @@
 		"latitude": Number
 	},
 	"averagePrice": Number,
-	"foursquare_url": String,
+	"external_url_info": String,
 	"dishes": [Dish]
 }
 //Dish
@@ -17,7 +17,8 @@
 	"id": Number,
 	"name": String,
 	"categories": [Category],
-	"ingredients": [String] 
+	"ingredients": [String],
+	"picture": String
 }
 //Category
 {

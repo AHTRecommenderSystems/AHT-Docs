@@ -177,3 +177,85 @@
       \label{Categorías propuestas para el caso de estudio}
     \end{center}
   \end{table}
+
+\begin{landscape}
+\section{Diccionario de Datos}
+\begin{table}[h]
+    \begin{center}
+      \begin{tabular}{ | c | c | c | c | c | c |p{5cm}}
+        \toprule
+        Entidad & Atributo & Tipo & Long Min & Long Max & Descripción\\
+        \midrule
+        Restaurante & Id  & Integer & 1 & 10000  & Es el identificador de restaurante \\
+        \midrule
+        Restaurante & Name  & String & 5 & 20  & Nombre del restaurante que se registrara en el sistema \\
+        \midrule
+        Restaurante & Address  & String & 10 & 50  & Dirección del Restaurante \\
+        \midrule
+        Restaurante & Longitude  & Float & -180 & 180  & Nos servira para tener la ubicación geografica 				del Restaurante \\
+        \midrule
+        Restaurante & latitude  & Float & -90 & 90  & Nos servira para tener la ubicación geografica del      		Restaurante\\
+        \midrule
+        Restaurante & averagePrice  & Number & 1 & 1  & Nos servira para darle un precio aproximado del     		platillo al usuario\\
+        \midrule
+        Restaurante & External url info  & String & 20 & 30  & Dirección url de una fuente de datos       		    externa \\
+        \midrule
+        User & Birthdate  & Date & 8 & 8  & Nos ayudara a saber la edad y fecha del usuario\\
+        \midrule
+        User & Email  & String & 15 & 40  & Para que el usuario pueda iniciar sesión en el sistema\\
+        \midrule
+        User & Password  & String & 8 & 16  & Ayudara al usuario a acceder al sistema \\
+        \midrule
+        User & since  & Date & 8 & 8  &  Nos indicará desde que fecha el usuario se dio de alta en el  		        sistema \\
+        \midrule
+        User & Id  & integer & 1 & 1000  & Nos servira para poder identificar al usuario \\
+        \midrule
+        User & Name  & String & 5 & 15  & Contendrá el Nombre del usuario \\
+        \midrule
+        User & Lastname  & String & 5 & 12 & Contredrá el Apellido del usuario \\
+        \midrule
+        User & Gender  & Char & 1 & 1  & Nos ayudara a saber el género del usuario \\
+        \bottomrule
+      \end{tabular}
+    \end{center}
+  \end{table}
+ \newpage
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{ | c | c | c | c | c | c |p{5cm}}
+        \toprule
+        Entidad & Atributo & Tipo & Long Min & Long Max & Descripción\\
+        \midrule
+        Dish & Id & Integer & 1 & 10000  & El número por el cual identificaremos al platillo\\
+        \midrule
+        Dish & Name  & String& 5 & 15  & Nombre del Platillo \\
+        \midrule
+        Dish & categories & integer & 1 & 200  &  Nos ayudara a saber a que categoria pertenece dicho 			    platillo\\
+        \midrule
+        Dish & Descripción & String & 60 & 500  & Contendrá las caracterisiticas del platillo \\
+        \midrule
+        Dish & Picture  & String & 60 & 200 & Contendrá la ruta de la imagen del platillo \\
+        \midrule
+        Category & Id & Integer & 1 & 10000 & Contendra el identificador de la categoría que pertenece \\
+        \midrule
+       	Category & Name  & String & 5 & 20  & Nombre de la categoria \\
+        \midrule
+        Category & Type  & String & 4 & 15  & A que tipo pertenece dicha categoría,ejemplo:Region \\
+        \midrule
+        Rated & Rating  & Float & 0.0 & 5.0  & Nos ayudara para saber que calificación le dio el usuario 			al platillo recomendado  \\
+        \midrule
+        Rated & On  & Date & 8 & 8  & Nos ayudara a saber en que fecha hizo ese rating \\
+        \midrule
+        Cliked & Last  & Date & 8 & 8  & La ultima fecha en que visualizo el platillo \\
+        \midrule
+        Cliked & Times  & Int & 1 &   100  & Las veces en las que a visualizado ese platillo \\
+        \midrule
+        Uploaded & On  & Date & 8 & 8 & En que fecha el usuario subió el platillo \\
+        \bottomrule
+      \end{tabular}
+      \caption{Diccionario de datos}
+      \label{Diccionario de datos}
+    \end{center}
+  \end{table}
+\end{landscape}  
+  

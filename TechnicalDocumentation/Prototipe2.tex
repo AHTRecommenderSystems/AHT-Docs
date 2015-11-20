@@ -1,31 +1,96 @@
 \chapter{Prototipo 2}
   \section{Análisis}
     \subsection{Objetivo}
-      Visualizar recomendaciones bajo el filtrado por contenido de platillos contenidos en el sistema.
-    \subsection{Caracteristicas}
+      Visualizar recomendaciones bajo el filtrado por contenido de los platillos contenidos en el sistema. 
+
+    \subsection{Características}
     \begin{itemize}
-      \item 
+      \item El sistema permite al usuario visualizar los platillos.
+      \item El sistema muestra recomendaciones de acuerdo a un solo platillo, para mostrar los que tienen una mayor similitud con éste.
+      \item El sistema permite la interacción de usuarios no registrados para obtener recomendaciones personalizadas con base en los platillos que ha visualizado.
+      \item La evaluación de similitud se logra a través de las categorías en común que tengan los platillos entre sí.
     \end{itemize}
 
     \subsection{Restricciones}
     \begin{itemize}
-      \item 
+      \item El sistema se ve limitado a la cantidad y características de los platillos existentes actualmente.
+      \item El usuario no registrado no podrá modificar o eliminar los platillos del sistema.
     \end{itemize}
 
   \section{Diseño}
-    %\subsection{Diagrama de clases}
+    Para la implementación de las recomendaciones por contenido, se consideran las categorías que tienen en común. La cantidad de categorías que poseen en común es identificada por una evaluación de similitud. Dicha evaluación genera un conjunto de relaciones con las que es posible determinar los artículos que se parecen más entre sí y obtener los vecinos más cercanos a cada elemento. Así, para los platillos, las categorías a las que pertenecen, permiten crear una vecindad para cada nodo donde es posible obtener cuáles son los platillos vecinos que más se parecen entre sí.
+
+    \subsection{Diagrama de clases}
+    Implementando el comportamiento descrito anteriormente se generan las siguientes clases que permiten obtener las recomendaciones por contenido.
+          \begin{figure}[h!]
+          \centering
+          \includegraphics[width=12cm]{./images/p2_classes.png}
+          \caption{Diagrama de clases del prototipo 2}
+        \end{figure}
 
     \subsection{Casos de uso}
-    \newpage
-      \begin{landscape}
-        \begin{figure}[h!]
-        \centering
-        \includegraphics[width=22.5cm,height=12cm]{./images/prototipo2.png}
-        \caption{Casos de uso del sistema}
-      \end{figure}
-      \end{landscape}
-    \newpage
+    Integrando la funcionalidad planteada en las clases anteriores dentro de un sistema web que permita la interacción del usuario se plantean los siguientes casos de uso.
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=16cm]{./images/prototipo2.png}
+      \caption{Casos de uso del prototipo 2}
+    \end{figure}
+    
+    \paragraph{CU. Obtener recomendación de platillos\\} 
+    \textbf{Descripción:} El usuario obtiene recomendaciones del sistema\\
+    \textbf{Actores:} Usuario \\
+    \textbf{Precondiciones:} Ninguna \\
+    \textbf{Flujo normal}\\
+    \begin{itemize}
+      \item El sistema muestra información de platillos relevantes no personalizadas.
+    \end{itemize}
+    \textbf{Flujo alternativo}\\
+    \begin{itemize}
+      \item El sistema muestra recomendaciones personalizadas de acuerdo a interacciones previas del usuario.
+    \end{itemize}
+
+    \paragraph{CU. Buscar platillos\\}
+    \textbf{Descripción:} El usuario utiliza el sistema de búsqueda para encontrar platillos relacionados.\\
+    \textbf{Actores:} Usuario\\
+    \textbf{Precondiciones:} Ninguna\\
+    \textbf{Flujo normal}\\
+    \begin{itemize}
+      \item El usuario escribe su búsqueda en el sistema. 
+      \item El sistema obtiene los platillos encontrados, así como platillos relacionados
+      \item El sistema muestra los resultados al usuario
+    \end{itemize}
+
+    \paragraph{CU. Visualizar platillo\\}
+    \textbf{Descripción:} El usuario visualiza la información descriptiva de un platillo\\
+    \textbf{Actores:} Usuario\\
+    \textbf{Precondiciones:} El usuario selecciona un platillo desde el CU. Obtener recomendación de platillos o desde el CU. Buscar platillos\\
+    \textbf{Flujo normal}\\
+    \begin{itemize}
+      \item El usuario selecciona un platillo de la lista de resultados
+      \item El sistema muestra la información descriptiva de ese platillo.
+    \end{itemize}
+
+    \paragraph{CU. Agregar platillo\\}
+    \textbf{Descripción:} El usuario agrega un platillo en el sistema\\
+    \textbf{Actores:} Usuario\\
+    \textbf{Precondiciones:} Ninguna\\
+    \textbf{Flujo normal}\\
+    \begin{itemize}
+      \item El sistema muestra el método de entrada para las características de los platillos
+      \item El usuario introduce los parámetros necesarios para registrar el platillo.
+      \item El sistema carga la información del platillo al sistema.
+    \end{itemize}
+    \textbf{Flujo alternativo}\\
+    \begin{itemize}
+      \item El sistema comprueba la validez de los datos, si no son correctos, se avisa al actor permitiendo que se corrijan. 
+      \item Si el sistema no puede salvar la información del nuevo platillo, se notifica al usuario que el platillo no ha sido agregado.
+    \end{itemize}
     
   \section{Resultados}
-    
+    Tras definir las acciones realizadas en el prototipo, se realiza el desarrollo del sistema Bonappettit, prototipo del sistema final que permite obtener recomendaciones con filtrado por contenido para usuarios no registrados en la plataforma.
+          \begin{figure}[h!]
+          \centering
+          \includegraphics[width=16cm]{./images/bonappettit.png}
+          \caption{Capturas de pantalla del sistema}
+        \end{figure}
 

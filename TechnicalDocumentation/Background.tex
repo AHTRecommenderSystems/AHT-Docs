@@ -49,7 +49,7 @@ Neo4j usa grafos para representar datos y las relaciones entre ellos. Un grafo s
 	 los nodos y las relaciones son intercambiables, su relación se puede interpretar en cualquier sentido. 	Las relaciones de amistad en la red social Facebook, por ejemplo, son de este tipo. 
 \subsubsection{ Grafos dirigidos:}
 	 los nodos y la relaciones no son bidireccionales por defecto. Las relaciones en Twitter son de este      	tipo. Un usuario puede seguir a determinados perfiles en esta red social sin que ellos le sigan a él.
-\newpage
+
 \subsubsection{Grafos con peso:}
 	en este tipo de gráficas las relaciones entre nodos tienen algún tipo de valoración numérica. Eso permite luego hacer operaciones.
 \subsubsection{Grafos con etiquetas:}
@@ -57,7 +57,7 @@ Neo4j usa grafos para representar datos y las relaciones entre ellos. Un grafo s
 \subsubsection{Grafos de propiedad}
 	es un grafo con peso, con etiquetas y donde podemos asignar propiedades tanto a nodos como relaciones (por ejemplo, cuestiones como nombre, edad, país de residencia, nacimiento). Es el más complejo.
 	Neo4j utiliza grafos de propiedad para extraer valor añadido de los datos de cualquier empresa con gran rendimiento y de una forma ágil, flexible y escalable.
-
+\newpage
 \subsubsection{Características de Neo4j\cite{19}}
 Neo4j tiene las siguientes carácteristicas:
 \begin{itemize}
@@ -86,10 +86,30 @@ Neo4j tiene las siguientes carácteristicas:
 \subsubsection{Recomendaciones en tiempo real y redes sociales:}
 	Neo4j permite conectar de forma eficaz a las personas con nuestros productos y servicios, en función de la información personal, sus perfiles en redes sociales y su actividad online reciente. En este sentido, las bases de datos orientadas a grafos son interesantes porque son capaces de conectar personas e intereses.
 	Con esa información, una empresa puede ajustar sus productos y servicios a su público objetivo y personalizar las recomendación en función de los perfiles. Eso es lo que permite que se aumente la precisión comercial y el compromiso del cliente.\cite{25}
-
+\newpage
 \section{Algoritmos de recomendación}
 \subsection{k-Vecinos más cercanos (k-Nearest Neighbors)}
 	El método k-nn (K nearest neighbors Fix y Hodges, 1951) es un método de clasificación supervisada. es un método de clasificación no paramétrico, que estima el valor de la función de densidad de probabilidad o directamente la probabilidad a posteriori de que un elemento x pertenezca a la clase Cj a partir de la información proporcionada por el conjunto de prototipos. En el proceso de aprendizaje no se hace ninguna suposición acerca de la distribución de las variables predictoras.
-\newpage
+
 \subsection{Slope One}
 	El filtrado colaborativo es una técnica usada por los Sistemas de Recomendación para combinar las opiniones y pruebas de diferentes usuarios con el fin de obtener recomendaciones personalizadas. Hay al menos dos clases de filtrados colaborativos: las técnicas basadas en usuarios son derivadas de la medición de similitudes entre usuarios, mientras que las técnicas basadas en artículos comparan las valoraciones dadas por distintos usuarios. Slope One es una familia de algoritmos usados para el Filtrado Colaborativo introducida en Slope One Predictors for Online Rating-Based Collaborative Filtering por Daniel Lemire y Anna Maclachlan. Posiblemente, esta es la forma más simple de filtrado colaborativo basado en artículos. Su simplicidad la hace especialmente sencilla de implementar eficientemente mientras que su exactitud está a la par de algoritmos más complejos y costosos.
+\subsection{Basado en Contenido}
+
+Los sistemas de recomendación basados en contenido, emplean técnicas de recuperación de información. Por ejemplo, un documento de texto es recomendado basado en una comparación ente su contenido y el del perfil del usuario. Típicamente, el perfil muestra una lista de palabras clave y sus pesos correspondientes. Dicho perfil puede ser definido explícitamente, el usuario contesta cuestionarios, o de forma semiautomática en base a diversas heurísticas [Lieberman et al. 1997]. Para identificar el tema del documento se hace un análisis de frecuencia para extraer las palabras clave. Si a un usuario le gusta un documento, los pesos de las palabras extraídas se añaden a los pesos de las palabras correspondientes en el perfil del usuario. Este proceso es conocido como retroalimentación de relevancia [Balavanovic y Shoham 1997].
+
+Este método de recomendación presenta algunos problemas como la sobre-especialización; el sistema sólo muestra al usuario elementos similares a los que ya ha visto anteriormente. Algunas veces este problema es resuelto agregando a la búsqueda aleatoreridad (por ejemplo mediante algoritmos genéticos). Otro problema se presenta al encontrar información multimedios, (con frecuencia presente en páginas de Web) puesto que cuando las recomendaciones son hechas sobre documentos de texto, está información es ignorada.
+\newpage
+\subsection{Filtrado colaborativo}
+Estos sistemas de recomendación presentan elementos que le han gustado a otros usuarios con gustos similares, con este propósito, calculan la similitud entre usuarios. En estos sistemas el usuario debe realizar una evaluación previa sobre algunos elementos. De esta forma se va formando el perfil del usuario.Para cada usuario se crea un conjunto de "vecinos cercanos", usuarios cuyas evaluaciones anteriores tienen grandes semejanzas a las del usuario en cuestión. Los resultados para los elementos no calificados se predicen en base a la combinación de puntos (scores) conocidos de los vecinos cercanos.
+
+
+En el filtrado colaborativo, el sistema no analiza los elementos evaluados, sino que las recomendaciones se basan solamente en la similitud entre usuarios. Esto trae consigo algunos problemas, como se comenta a continuación. Cuando un usuario llega al sistema, no es posible hacerle recomendaciones hasta que su perfil sea lo suficientemente completo para encontrarle a su grupo de vecinos cercanos. Además si los gustos del usuario son poco comunes, encontrarle un conjunto de vecinos cercanos será una tarea complicada. Esto hace notar que las recomendaciones dependen directamente del número y variedad de usuarios en el sistema.
+
+
+En estos sistemas la identificación de comunidades de interés emergentes en la población de usuarios es automática, lo que permite mejoras en la conciencia de grupo y la comunicación entre éstos [Balavanovic y Shoham 1997].
+
+
+Existen trabajos relacionados en ambas metodologías. Algunos, como Balavanovic y Shoham [1997], Lieberman et al. [1997] y Wexelblat [1998], utilizan agentes para implementación de sus sistemas de recomendación.
+
+
+Los sistemas de recomendación han cobrado gran importancia debido a su aceptación por la gente y la ayuda que brindan en el filtrado de información. A continuación se mencionan algunos sistemas de recomendación que son relevantes para este trabajo.

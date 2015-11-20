@@ -18,7 +18,7 @@
 
   \section{Diseño}
     \subsection{Modelo de datos}
-      Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como podemos ver en el siguiente diagrama de grafos.
+      Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como se puede apreciar en el siguiente diagrama de grafos.
 
       \newpage
           \begin{landscape}
@@ -43,10 +43,9 @@
         \item Un platillo puede ser de una o más categorías.
         \item Un platillo puede ser servido en uno o más restaurantes
         \item Un usuario puede agregar un platillo
-        \item Un usuario puede interactúar con un platillo a través de un conteo de clics.
+        \item Un usuario puede interactuar con un platillo a través de un conteo de clics.
         \item Un usuario puede evaluar qué tanto le gustó un platillo a través de un rating cuantitativo.
       \end{itemize} 
-
 
       \begin{landscape}
         \begin{figure}[h!]
@@ -57,7 +56,9 @@
       \end{landscape}
 
   \section{Resultados}
-    Como resultado de la implementación del modelo de datos para el sistema podemos ver la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
+    Utilizando el modelo propuesto por equipo de trabajo, es posible generar datos de prueba con contenido de platillos así como proponer una serie de categorías que fungirán como características para clasificar los diferentes platillos. Las categorías propuestas se identifican por diferentes rubros como son: tipo de comida, sabor, ocasión, región, salud, temperatura, 
+
+    Como resultado de la implementación del modelo de datos para el sistema se muestra la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
             \begin{figure}[h!]
             \centering
             \includegraphics[width=12cm]{./images/graph}

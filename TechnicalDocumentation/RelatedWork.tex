@@ -1,30 +1,21 @@
-\chapter {Antecedentes}
-\section {Sistemas de recomendación}
-  Un sistema de recomendación (SR) proporciona a los usuarios un conjunto de sugerencias sobre un determinado tipo de artículos a través de diferentes características propias del artículo, del usuario, o de la interacción de ambos, a este conjunto de sugerencias se le conoce como recomendación. Los SR estudian las características de cada usuario y mediante un procesamiento de los datos, encuentra un subconjunto de artículos que pueden resultar de interés para el mismo. Los SR se clasifican principalmente en 3 tipos: 
-  \begin{itemize}
-    \item Filtrado basado en Contenido: Las recomendaciones están basadas en el conocimiento que se tiene sobre los artículos que el usuario a proporcionado, pueden ser de forma implícita o explícita, y se le recomendarán artículos similares que le puedan gustar o interesar. 
-    \item SR basado en Filtrado Colaborativo: El filtrado colaborativo consiste en ver que usuarios son similares al usuario activo (o usuario al que hay que realizarle las recomendaciones) y después recomendar aquellos artículos que no han sido votados por el usuario activo y que han resultado bien valorados por los usuarios similares. 
-    \item SR con métodos de Filtrado Híbrido: Mezclan alguno de los dos filtrados mencionados anteriormente para realizar recomendaciones e incluso lo combinan con alguna otra técnica de inteligencia artificial como pueda ser la lógica borrosa o la computación evolutiva. \cite{10}
-  \end{itemize}
-
-\section {Ejemplos de sistemas de recomendación}
+\chapter {Estado del arte}
   Debido al auge de los sistemas de recomendación, es posible mostrar una larga lista de servicios que utilizan este tipo de herramientas, a continuación se encuentran algunas muy relevantes. Cabe destacar que muchas de ellas solo son un sistema de recomendación de código cerrado y no permiten reutilizar sus funciones de esta forma para algún desarrollador que desee realizar una aplicación similar.
 
-  \subsection {Spotify}
+  \section {Spotify}
     Desarrollado en el 2008, es un software multiplataforma que permite escuchar en modo radio buscando por artista, álbum o listas de reproducción creadas por los propios usuarios. Spotify hace uso de un sistema de recomendación para mostrar canciones y listas de reproducción a sus usuarios. Utiliza una transferencia de archivos de audio por Internet a través de la combinación de servidor basado en el streaming y en la transferencia peer-to-peer (P2P). Cuenta con versiones para Windows, Mac, Linux y una versión web. \cite{4}
 
-  \subsection{Trabajo Terminal Sistema Generador de Recomendaciones para una Tienda En-Línea de videojuegos.} 
+  \section{Trabajo Terminal Sistema Generador de Recomendaciones para una Tienda En-Línea de videojuegos.} 
     Desarrollado en el 2010, es una plataforma web de información para la venta de artículos de entretenimiento. Este Trabajo Terminal no es una API pero utiliza un sistema de recomendaciones para mejorar las compras de sus usuarios. Palabras clave:Recomendación, TopN, mercancía, tienda en línea.\cite{5}
 
-  \subsection{PredictionIO}
+  \section{PredictionIO}
     Proporciona los recursos necesarios para crear un servidor de recomendaciones usando aprendizaje máquina. Todo a través de una API REST que se comunica con las distintas aplicaciones clientes y va recolectando datos para aplicar los más de 20 algoritmos de recomendaciones precargados. Cuenta con varios SDK para integrarlo en sus aplicaciones como Java, Python, Ruby o PHP. Además de sistemas de recomendación y aprendizaje máquina Plataformas: Linux/MacOSX, Vagrant(VirtualBox), Web, Source Code.\cite{6}
 
-  \subsection{Easyrec}
+  \section{Easyrec}
     Sistema de personalización de propósito general, utiliza una API de servicio web actual está personalizada para proporcionar tiendas en línea con recomendaciones de artículos. Cabe mencionar que es una aplicación lista para usar, no un framework algorítmico. No es una API, pero si hace eso de una API el cual hace las recomendaciones. Componentes: aplicación para almacenar servicios de recomendación, API para varias interfaces de servicio web. Año: 7 de mayo 2013\cite{7}
 
-  \subsubsection{REST API}
-    API easyrec es capaz de recibir acciones desde o enviar recomendaciones a la aplicación web en estilo REST. Todas las acciones de los usuarios enviados a easyrec son analizados por el ruleminer, que se ejecuta una vez al día de forma predeterminada. Si similitudes significativas en el comportamiento del usuario se pueden encontrar, se generan recomendaciones y son accesibles al instante utilizando los servicios web de recomendación. Componentes: XML o notación JSON para mostrar las recomendaciones. \cite{8}
+    \subsection{REST API}
+      API easyrec es capaz de recibir acciones desde o enviar recomendaciones a la aplicación web en estilo REST. Todas las acciones de los usuarios enviados a easyrec son analizados por el ruleminer, que se ejecuta una vez al día de forma predeterminada. Si similitudes significativas en el comportamiento del usuario se pueden encontrar, se generan recomendaciones y son accesibles al instante utilizando los servicios web de recomendación. Componentes: XML o notación JSON para mostrar las recomendaciones. \cite{8}
 
-  \subsection{LensKit}
+  \section{LensKit}
     Desarrollado principalmente por la Universidad del Estado de Texas y por GroupLens Research en la Universidad de Minessota, es una API para desarrollo de sistemas de recomendación, que funciona bajo algoritmos de recomendación para artículos y usuarios para realizar las recomendaciones de los artículos. Su implementación puede ser observada en el sistema de recomendación de películas MovieLens desarrollado por el mismo equipo de trabajo. \cite{11}
     

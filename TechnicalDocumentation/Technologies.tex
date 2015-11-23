@@ -1,63 +1,94 @@
 \section{Tecnologías}
 Para el desarrollo del proyecto se propone utilizar las siguientes tecnologías que permitirán lograr los objetivos propuestos en el sistema. Las ventajas que representan para el desarrollo son descritas a continuación.
 
-	\begin{table}[h]
-	\begin{center}
-	  \begin{tabular}{ | c | p{10cm} | }
-	 	% Neo4j, Java(OGM, JSP, Spring), Bootstrap, JQuery, Git
-	    \toprule
-	    Nombre & Ventajas \\
-	    \midrule
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=25mm]{images/java}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item El sistema será desarrollado en lenguaje Java, debido a sus características propias del lenguaje y al conocimiento técnico que tiene de este el equipo de trabajo. Así mismo se usarán diferentes bibliotecas que probablemente auxiliarán en el desarrollo del sistema.
-	      \item Las tecnologías de Java mantienen sus características de independencia de la plataforma, 
-	      \item Para el desarrollo se usarán tecnologías como JSP, Object Graph Mapping (OGM).
-	    \end{itemize} \cite{26}\\
-	    \midrule
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{images/neo4j}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item Debido a sus características como líder en la rama de las bases de datos orientadas a grafos se utilizará el sistema gestor de bases de datos proporcionado por Neo4j. 
-	      \item A diferencia de los sistemas de bases de datos relacionales como MySQL, o SQL Server, las bases de datos orientadas a grafos tienen la característica de proporcionar una estructura flexible de datos, así como estar desarrollada para problemas donde las relaciones entre las entidades tienen una relevancia importante en la resolución del problema.
-	    \end{itemize} \\
-	    \midrule    
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{images/maven}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item Permite la construcción y gestión de proyectos Java. 
-	      \item Utiliza un modelo de configuración basado XML (POM) para describir el proyecto de software a construir.
-	    \end{itemize} \\
-	    \bottomrule
-		\end{tabular}
-  	\end{center}
-	\end{table}
-	\begin{table}[h]
-	\begin{center}
-	  \begin{tabular}{ | c | p{10cm} | }
-	 	% Neo4j, Java(OGM, JSP, Spring), Bootstrap, JQuery, Git
-	    \toprule
-	    Nombre & Ventajas \\
-	    \midrule
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{images/jquery}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item Es una biblioteca de JavaScript que permite simplificar la manera de interactuar con los documentos HTML.
-	      \item Permite manejar eventos y agregar integración con la técnica Ajax a páginas web. 
-	      \item Entre sus características podemos destacar que es una herramienta de código abierto. 
-	    \end{itemize} \\
-	    \midrule
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{images/git}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item Es una herramienta de control de versiones (VCS) pensada en la eficiencia y la confiabilidad del mantenimiento de versiones.
-	      \item Integrada con la platafroma GitHub, permite el trabajo colaborativo en diferentes proyectos.
-	    \end{itemize} \\
-	    \midrule
-	    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{images/bootstrap}} &
-	    \begin{itemize}[topsep=0pt]
-	      \item Para el maquetado de las vistas, se utilizará la herramienta proporcionada por Bootstrap, que permite realizar vistas en lenjuage HTML, usando CSS y Jquery. 
-	      \item Permite el desarrollo en un menor tiempo de las visas finales para proyectos web.
-	    \end{itemize} \\
-	    \bottomrule
-		\end{tabular}
-  	\caption{Descripción de las tecnologías}
-  	\label{Descripción de las tecnologías}
-  	\end{center}
-	\end{table}
+	\begin{table}[b!]
+    \centering
+      \begin{tabular}{|p{2cm}|ll}
+        \hline
+        \multicolumn{2}{|c|}{{\bf Tabla de Comparación de Bases de datos}} \\ 
+        \hline
+          \multicolumn{1}{|p{4cm}|}{{\bf Nombre}} & 
+		  \multicolumn{1}{p{10cm}|}{{\bf Características}}\\
+
+        \hline
+          \multicolumn{1}{|p{5cm}|}{\includegraphics[width=0.3\textwidth]{images/neo4j}} & 
+          \multicolumn{1}{p{10cm}|}{\begin{itemize}
+        \item Es una base de datos open-source,esta escrita en java.
+        \item No hay esquema. 
+        \item Lenguaje de query propio, Cypher.
+        \item Las escrituras se pueden realizar en cualquier instancia del clúster.
+      \end{itemize}} \\
+         
+        \hline
+          \multicolumn{1}{|p{5cm}|}{\includegraphics[width=0.3\textwidth]{images/InfiniteGraph}} & 
+          \multicolumn{1}{p{10cm}|}{
+          \begin{itemize}
+        \item Almacenamiento en la nube.
+        \item Apoyo de consultas en paralelo.
+        \item Precios felixibles y opciones de licencia.
+        \item Totalmente transaccional y multi-hilo,
+      \end{itemize}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{\includegraphics[width=0.3\textwidth]{images/InfoGrid}} & 
+          \multicolumn{1}{p{8cm}|}{
+          \begin{itemize}
+        \item Recorrido Gráfico y consultas de tipo relacional.
+        \item Indexación personalizable.
+        \item Gestión de almacenamiento personalizable.
+      \end{itemize}}\\ 
+         \hline
+        %\hline
+      \end{tabular}
+      \caption{Analisis de Riesgos}
+      \label{Analisis de riesgos}
+    \end{table}
+\newpage
+\section{Tecnologías}
+Para el desarrollo del proyecto se propone utilizar las siguientes tecnologías que permitirán lograr los objetivos propuestos en el sistema. Las ventajas que representan para el desarrollo son descritas a continuación.
+
+	\begin{table}[b!]
+    \centering
+      \begin{tabular}{|p{1cm}|ll}
+        \hline
+        \multicolumn{2}{|c|}{{\bf Tabla de Riesgos}} \\ 
+        \hline
+          \multicolumn{1}{|p{4cm}|}{{\bf Nombre}} & 
+		  \multicolumn{1}{p{10cm}|}{{\bf Características}}\\
+
+        \hline
+          \multicolumn{1}{|p{5cm}|}{\includegraphics[width=0.3\textwidth]{images/bootstrap}} & 
+          \multicolumn{1}{p{10cm}|}{\begin{itemize}
+          \item es un framework o conjunto de herramientas de software libre para diseño de sitios y aplicaciones web. 
+        \item Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS, así como, extensiones de JavaScript opcionales adicionales.
+        \item es compatible con la mayoría de los navegadores web.
+        \item Bootstrap es de código abierto y está disponible en GitHub. 
+        \item Desde la versión 2.0 también soporta diseños sensibles. Esto significa que el diseño gráfico de la página se ajusta dinámicamente, tomando en cuenta las características del dispositivo usado (Computadoras, tabletas, teléfonos móviles).
+      \end{itemize}} \\
+         
+        \hline
+          \multicolumn{1}{|p{5cm}|}{\includegraphics[width=0.3\textwidth]{images/foundation}} & 
+          \multicolumn{1}{p{10cm}|}{
+          \begin{itemize}
+        \item No tiene que agregar clases de responder o lograr cierto estilo.
+        \item Muchos prefieren Foundation, ya que ofrece más flexibilidad. 
+		\item Posee una biblioteca de validación  de formularios.
+        \item Fácil navegación de su sitio a otro sitio.
+        \item Tablas de precios,diseñado para mostrar los precios de un producto a base de suscripción.
+        \item Las páginas web se ajustan a diferentes dispositivos.
+        \item Nos permite modificar la dirección del texto; grande para los sitios en otros idiomas donde los personajes se mueven de derecha a izquierda
+      \end{itemize}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{\includegraphics[width=0.3\textwidth]{images/InfoGrid}} & 
+          \multicolumn{1}{p{8cm}|}{
+          \begin{itemize}
+        \item Recorrido Gráfico y consultas de tipo relacional.
+        \item Indexación personalizable.
+        \item Gestión de almacenamiento personalizable.
+      \end{itemize}}\\ 
+         \hline
+        %\hline
+      \end{tabular}
+      \caption{Analisis de Riesgos}
+      \label{Analisis de riesgos}
+    \end{table}
+

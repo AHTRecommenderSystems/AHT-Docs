@@ -1,4 +1,4 @@
 all:
 	pdflatex Technical_Report && rm *.out *.toc *.log *.aux *.lof *.lot 
 clean: 
-	rm *.out *.toc *.log *.aux *.lof *.lot 
+	rm *.out *.toc *.log *.aux *.lof *.lot *.fls *.fdb_latexmk

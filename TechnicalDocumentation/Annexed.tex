@@ -1,69 +1,7 @@
 \newpage
 \chapter{Anexos}
-
-\iffalse
-\newpage
-\section*{Pruebas unitarias}
-\subsection*{Smart Owl}
-\begin{center}
-  \includegraphics[width=\textwidth]{images/SmartOwlTest1}
-\end{center}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{images/SmartOwlTest2}
-\end{center}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{images/SmartOwlTest3}
-\end{center}
-\addcontentsline{toc}{chapter}{Anexo 1: Pruebas Unitarias}
-%
-% User stories
-%
-\newpage
-\section*{Historias de Usuario}
-\subsection*{Friendly Dolphin}
-  \begin{itemize}
-    \item US1 Reporte de información climática actual
-    \begin{itemize}
-      \item \textbf{Como} usuario de Friendly Dolphin
-      \item \textbf{Quiero} consultar la información climática actual
-      \item \textbf{De tal manera} que pueda generar un reporte con la información estandarizada.
-    \end{itemize}
-    \item Criterios de Aceptación
-    \begin{itemize}
-      \item Seleccionar una región del pais.
-      \item Se deberá mostrar la información en texto plano.
-      \item Opción para exportar la información en formato JSON o XML.
-    \end{itemize}
-  \end{itemize}
-  \begin{itemize}
-    \item US2 Historial de información climática
-    \begin{itemize}
-      \item \textbf{Como} usuario de Friendly Dolphin
-      \item \textbf{Quiero} consultar el historial de los datos climáticos.
-      \item \textbf{De tal manera} que pueda visualizar de manera gráfica el cambio de los valores de las variables climáticas a través de un periodo de tiempo
-    \end{itemize}
-    \item Criterios de Aceptación
-    \begin{itemize}
-      \item Consultar la información entre una fecha de Inicio y una fecha Final.
-      \item Se deberá mostrar la información de las variables climáticas en el periodo seleccionado.
-      \item Opción para exportar la información en formato JSON o XML.
-    \end{itemize}
-  \end{itemize}
-\addcontentsline{toc}{chapter}{Anexo 2: Historias de Usuario.}
-%
-% RESTful Services
-%
-\newpage
-\section*{Servicios REST}
-\paragraph{La ventaja al usar servicios de tipo REST, es la sencillez al cambiar el contenido que se expone sin tener que cambiar o generar un protocolo de comunicación ya que toma como base HTTP}.
-\paragraph{Simplemente es necesario con un cliente, desde un navegador web hasta clientes dedicados a servicios REST, para poder accedera a los recursos expuestos. Todas las API's rest siguen una convención de verbos tomados de la base de HTTP (GET, POST, PUT, DELETE).}
-\paragraph{En comparación con servicios de tipo SOAP, no se requiere una alta atomicidad y ni transacciones, una de las razones por la que los servicios WS suelen ser usados.}
-\paragraph{Finalmente, los servicios de tipo REST pueden tener respuestas en diversos formatos, principalmente JSON y XML, esto brinda al desarollador o a la persona que consula como tratar la respuesta por bibliotecas de terceros o nativas.}
-\paragraph{El soporte para formatos JSON es nativo en los navegadores web, otra de las razones por las cuales éstos servicios han ido ganando mercado ya que el desarrollo de aplicaciones Web ha aumentado de forma drástica en los últimos años. \cite{31}}
-\addcontentsline{toc}{chapter}{Anexo 3: Servicios REST}
-\fi
+% Pruebas unitarias
+% Historias de usuario
 \section{Categorías propuestas para el caso de estudio}
   \begin{table}[h]
     \begin{center}
@@ -71,45 +9,45 @@
         \toprule
         Id & Tipo & Categoría & Id & Tipo & Categoría\\
         \midrule
-        1 & kind  & Panes y masas & 47 & occasion  & Ocasión especial \\
+        1 & Tipo de comida & Panes y masas  & 48 & Ocasión   & Merienda \\
         \midrule
-        2 & kind  & Pastas & 48 & region  & Italiana \\
+        2 & Tipo de comida & Pastas  & 49 & Ocasión   & Cena \\
         \midrule
-        3 & kind  & Bizcochos y galletas & 49 & region  & Mediterránea \\
+        3 & Tipo de comida & Bizcochos y galletas  & 50 & Región   & Italiana \\
         \midrule
-        4 & kind  & Carnes & 50 & region  & Asiática \\
+        4 & Tipo de comida & Carnes  & 51 & Región   & Mediterránea \\
         \midrule
-        5 & kind  & Aves & 51 & region  & Mexicana \\
+        5 & Tipo de comida & Aves  & 52 & Región   & Asiática \\
         \midrule
-        6 & kind  & Pescados y mariscos & 52 & region  & Americana \\
+        6 & Tipo de comida & Pescados y mariscos  & 53 & Región   & Mexicana \\
         \midrule
-        7 & kind  & Ensaladas & 53 & region  & Hindú \\
+        7 & Tipo de comida & Ensaladas  & 54 & Región   & Americana \\
         \midrule
-        8 & kind  & Contenido alcohólico & 54 & region  & Francesa \\
+        8 & Tipo de comida & Contenido alcohólico  & 55 & Región   & Hindú \\
         \midrule
-        9 & kind  & Salsas y guarniciones & 55 & region  & Tailandesa \\
+        9 & Tipo de comida & Salsas y guarniciones  & 56 & Región   & Francesa \\
         \midrule
-        10 & kind  & Sopas y cremas & 56 & region  & Cantonesa \\
+        10 & Tipo de comida & Sopas y cremas  & 57 & Región   & Tailandesa \\
         \midrule
-        11 & kind  & Arroces & 57 & region  & Japonesa \\
+        11 & Tipo de comida & Arroces  & 58 & Región   & Cantonesa \\
         \midrule
-        12 & kind  & Legumbres y guisos & 58 & region  & China \\
+        12 & Tipo de comida & Legumbres y guisos  & 59 & Región   & Japonesa \\
         \midrule
-        13 & kind  & Tartas y dulces & 59 & region  & Medio oriente \\
+        13 & Tipo de comida & Tartas y dulces  & 60 & Región   & China \\
         \midrule
-        14 & kind  & Helados y sorbetes & 60 & region  & Alemana \\
+        14 & Tipo de comida & Helados y sorbetes  & 61 & Región   & Medio oriente \\
         \midrule
-        15 & kind  & Frutas & 61 & region  & Argentina \\
+        15 & Tipo de comida & Frutas  & 62 & Región   & Alemana \\
         \midrule
-        16 & kind  & Verduras & 62 & region  & Brasileña \\
+        16 & Tipo de comida & Verduras  & 63 & Región   & Argentina \\
         \midrule
-        17 & kind  & Huevos & 63 & region  & Colombiana \\
+        17 & Tipo de comida & Huevos  & 64 & Región   & Brasileña \\
         \midrule
-        18 & kind  & Lácteos & 64 & region  & Coreana \\
+        18 & Tipo de comida & Lácteos  & 65 & Región   & Colombiana \\
         \midrule
-        19 & kind  & Frutos secos & 65 & region  & Cubana \\
+        19 & Tipo de comida & Frutos secos  & 66 & Región   & Coreana \\
         \midrule
-        20 & kind  & Encurtidos y conservas & 66 & region  & Española \\
+        20 & Tipo de comida & Encurtidos y conservas  & 67 & Región   & Cubana \\
         \bottomrule
       \end{tabular}
     \end{center}
@@ -120,101 +58,96 @@
         \toprule
         Id & Tipo & Categoría & Id & Tipo & Categoría\\
         \midrule
-        21 & kind  & Postre & 67 & region  & Finlandesa \\
+        21 & Tipo de comida & Postre  & 68 & Región   & Española \\
         \midrule
-        22 & kind  & Bebida & 68 & region  & Griega \\
+        22 & Tipo de comida & Bebida  & 69 & Región   & Finlandesa \\
         \midrule
-        23 & kind  & Primeros platos & 69 & region  & Holandesa \\
+        23 & Tipo de comida & Primeros platos  & 70 & Región   & Griega \\
         \midrule
-        24 & kind  & Segundos platos & 70 & region  & Indonesa \\
+        24 & Tipo de comida & Segundos platos  & 71 & Región   & Holandesa \\
         \midrule
-        25 & kind  & Entradas & 71 & region  & Portuguesa \\
+        25 & Tipo de comida & Entradas  & 72 & Región   & Indonesa \\
         \midrule
-        26 & kind  & Sopas y cremas & 72 & health  & Bajas en colesterol \\
+        26 & Tipo de comida & Sopas y cremas  & 73 & Región   & Portuguesa \\
         \midrule
-        27 & kind  & Acompañamientos & 73 & health  & Diabéticos \\
+        27 & Tipo de comida & Acompañamientos  & 74 & Salud   & Bajas en colesterol \\
         \midrule
-        28 & kind  & Emparedados & 74 & health  & Sin lactosa \\
+        28 & Tipo de comida & Emparedados  & 75 & Salud   & Diabéticos \\
         \midrule
-        29 & kind  & Botana & 75 & health  & Celiacos \\
+        29 & Tipo de comida & Botana  & 76 & Salud   & Sin lactosa \\
         \midrule
-        30 & kind  & Comida rápida & 76 & health  & Alérgicos \\
+        30 & Tipo de comida & Comida rápida  & 77 & Salud   & Celiacos \\
         \midrule
-        31 & flavour  & Dulce & 77 & health  & Bajar de peso \\
+        31 & Sabor & Dulce  & 78 & Salud   & Alérgicos a los frutos secos \\
         \midrule
-        32 & flavour  & Salado & 78 & health  & Vegetarianos \\
+        32 & Sabor & Salado  & 79 & Salud   & Colón irritable \\
         \midrule
-        33 & flavour  & Ácido & 79 & temperature  & Frío \\
+        33 & Sabor & Ácido  & 80 & Salud   & Bajar de peso \\
         \midrule
-        34 & flavour  & Amargo & 80 & temperature  & Templado \\
+        34 & Sabor & Amargo  & 81 & Salud   & Vegetarianos \\
         \midrule
-        35 & flavour  & Umami & 81 & temperature  & Caliente \\
+        35 & Sabor & Umami  & 82 & Temperatura & Frío \\
         \midrule
-        36 & flavour  & Picante & 82 & people  & Bebes \\
+        36 & Sabor & Picante  & 83 & Temperatura & Templado \\
         \midrule
-        37 & occasion  & Halloween & 83 & people  & Niños \\
+        37 & Ocasión & Halloween  & 84 & Temperatura & Caliente \\
         \midrule
-        38 & occasion  & Navidad & 84 & people  & Adultos \\
+        38 & Ocasión & Navidad  & 85 & Gente & Bebes \\
         \midrule
-        39 & occasion  & San Valentín & 85 & people  & Familiares \\
+        39 & Ocasión & San Valentín  & 86 & Gente & Niños \\
         \midrule
-        40 & occasion  & Primavera & 86 & people  & Adultos mayores \\
+        40 & Ocasión & Ocasión especial & 87 & Gente & Adultos \\
         \midrule
-        41 & occasion  & Verano & 87 & texture  & Liquidas \\
+        41 & Ocasión & Primavera  & 88 & Gente & Familiares \\
         \midrule
-        42 & occasion  & Otoño & 88 & texture  & Blandas \\
+        42 & Ocasión & Verano  & 89 & Gente & Adultos mayores \\
         \midrule
-        43 & occasion  & Invierno & 89 & texture  & Semi-blandas \\
+        43 & Ocasión & Otoño  & 90 & Textura & Liquidas \\
         \midrule
-        44 & occasion  & Desayunos & 90 & texture  & Crujientes \\
+        44 & Ocasión & Invierno  & 91 & Textura & Blandas \\
         \midrule
-        45 & occasion  & Almuerzos & 91 & texture  & Duras \\
+        45 & Ocasión & Desayunos  & 92 & Textura & Semi-blandas \\
         \midrule
-        46 & occasion  & Meriendas & & & \\
+        46 & Ocasión & Almuerzos  & 93 & Textura & Crujientes \\
+        \midrule
+        47 & Ocasión   & Comida & 94 & Textura & Duras \\
         \bottomrule
       \end{tabular}
       \caption{Categorías propuestas para el caso de estudio}
-      \label{Categorías propuestas para el caso de estudio}
+      \label{table:categorias}
     \end{center}
   \end{table}
 
 \begin{landscape}
 \section{Diccionario de Datos}
-\begin{table}[h]
+  Los valores mínimos y máximos de los atributos son determinados por la longitud cuando el tipo de dato amerita una validación por longitud, como lo son las cadenas de texto; y una valoración por rango, para aquellos datos donde solo se aceptan datos que pertenezcan a cierto conjunto, como lo es un rango de numeros, denotado por la forma [inicio:fin].
+  \begin{table}[h]
     \begin{center}
-      \begin{tabular}{ | c | c | c | c | c | c |p{5cm}}
+      \begin{tabular}{| c | c | c | p{3cm} | p{12cm}|} 
         \toprule
-        Entidad & Atributo & Tipo & Long Min & Long Max & Descripción\\
+        Entidad & Atributo & Tipo & Min / Max & Descripción\\
         \midrule
-        Restaurante & Id  & Integer & 1 & 10000  & Es el identificador de restaurante \\
+        Restaurante & Id  & Long & [1:2\^{ }63-1] & Es el identificador de restaurante \\
         \midrule
-        Restaurante & Name  & String & 5 & 20  & Nombre del restaurante que se registrara en el sistema \\
+        Restaurante & Name  & String & Min: 5, Max: 20  & Nombre del restaurante que se registrara en el sistema \\
         \midrule
-        Restaurante & Address  & String & 10 & 50  & Dirección del Restaurante \\
+        Restaurante & Address  & String & Min:10, Max:50  & Dirección del Restaurante \\
         \midrule
-        Restaurante & Longitude  & Float & -180 & 180  & Nos servira para tener la ubicación geografica 				del Restaurante \\
+        Restaurante & Longitude  & Float & [-180:180]  & Indica la longitud de la ubicación geográfica del restaurante \\
         \midrule
-        Restaurante & latitude  & Float & -90 & 90  & Nos servira para tener la ubicación geografica del      		Restaurante\\
+        Restaurante & latitude  & Float & [-90:90]  & Indica la latitud de la posición geográfica del restaurante\\
         \midrule
-        Restaurante & averagePrice  & Number & 1 & 1  & Nos servira para darle un precio aproximado del     		platillo al usuario\\
+        Restaurante & averagePrice  & Integer & [1:5]  & Indica un precio aproximado de los platillos del restaurante, donde 1 identifica a un precio menor y 5 a un precio mayor en el restaurante\\
         \midrule
-        Restaurante & External url info  & String & 20 & 30  & Dirección url de una fuente de datos       		    externa \\
+        Restaurante & External url info  & String & Min:20, Max:30  & Dirección url de una fuente de datos       		    externa \\
         \midrule
-        User & Birthdate  & Date & 8 & 8  & Nos ayudara a saber la edad y fecha del usuario\\
+        User & Birthdate  & Date & [Fecha actual - 100 años:Fecha actual - 13 años]  & Indica la fecha de nacimiento del usuario\\
         \midrule
-        User & Email  & String & 15 & 40  & Para que el usuario pueda iniciar sesión en el sistema\\
+        User & Email  & String & Min:5, Max:50 & Email del usuario, necesario para la identificación del mismo\\
         \midrule
-        User & Password  & String & 8 & 16  & Ayudara al usuario a acceder al sistema \\
+        User & Password  & String & Min:8, Max:20  & Contraseña del usuario. Necesaria para su identificación.\\
         \midrule
-        User & since  & Date & 8 & 8  &  Nos indicará desde que fecha el usuario se dio de alta en el  		        sistema \\
-        \midrule
-        User & Id  & integer & 1 & 1000  & Nos servira para poder identificar al usuario \\
-        \midrule
-        User & Name  & String & 5 & 15  & Contendrá el Nombre del usuario \\
-        \midrule
-        User & Lastname  & String & 5 & 12 & Contredrá el Apellido del usuario \\
-        \midrule
-        User & Gender  & Char & 1 & 1  & Nos ayudara a saber el género del usuario \\
+        User & since  & Date & - & Indicará desde que fecha el usuario se dio de alta en el sistema \\
         \bottomrule
       \end{tabular}
     \end{center}
@@ -222,35 +155,41 @@
  \newpage
   \begin{table}
     \begin{center}
-      \begin{tabular}{ | c | c | c | c | c | c |p{5cm}}
+      \begin{tabular}{| c | c | c | p{3cm} | p{12cm}|} 
         \toprule
-        Entidad & Atributo & Tipo & Long Min & Long Max & Descripción\\
+        Entidad & Atributo & Tipo & Min / Max & Descripción\\
         \midrule
-        Dish & Id & Integer & 1 & 10000  & El número por el cual identificaremos al platillo\\
+        User & Id  & Long & [1:2\^{ }63-1] & Identificador numérico del usuario\\
         \midrule
-        Dish & Name  & String& 5 & 15  & Nombre del Platillo \\
+        User & Name  & String & Min:5, Max:30  & Nombre del usuario \\
         \midrule
-        Dish & categories & integer & 1 & 200  &  Nos ayudara a saber a que categoria pertenece dicho 			    platillo\\
+        User & Lastname  & String & Min:5, Max:30 & Apellido del usuario \\
         \midrule
-        Dish & Descripción & String & 60 & 500  & Contendrá las caracterisiticas del platillo \\
+        User & Gender  & Char & [F:M]  & Género del usuario \\
         \midrule
-        Dish & Picture  & String & 60 & 200 & Contendrá la ruta de la imagen del platillo \\
+        Dish & Id & Long & [1:2\^{ }63-1] & Identificador numérico del platillo\\
         \midrule
-        Category & Id & Integer & 1 & 10000 & Contendra el identificador de la categoría que pertenece \\
+        Dish & Name  & String & Min:5, Max:50  & Nombre del Platillo \\
         \midrule
-       	Category & Name  & String & 5 & 20  & Nombre de la categoria \\
+        Dish & Description & String & Min:60, Max:500  & Contendrá las características del platillo, incluyendo la lista de los ingredientes. \\
         \midrule
-        Category & Type  & String & 4 & 15  & A que tipo pertenece dicha categoría,ejemplo:Region \\
+        Dish & Picture  & String & Min:60, Max:200 & Contendrá la ruta de la imagen del platillo \\
         \midrule
-        Rated & Rating  & Float & 0.0 & 5.0  & Nos ayudara para saber que calificación le dio el usuario 			al platillo recomendado  \\
+        Category & Id & Long & [1:2\^{ }63-1] & Contendrá el identificador de la categoría que pertenece \\
         \midrule
-        Rated & On  & Date & 8 & 8  & Nos ayudara a saber en que fecha hizo ese rating \\
+       	Category & Name  & String & Min:5, Max:20  & Nombre de la categoría \\
         \midrule
-        Cliked & Last  & Date & 8 & 8  & La ultima fecha en que visualizo el platillo \\
+        Category & Type  & String & Min:4, Max:15  & A que tipo pertenece dicha categoría,ejemplo:Region \\
         \midrule
-        Cliked & Times  & Int & 1 &   100  & Las veces en las que a visualizado ese platillo \\
+        Rated & Rating  & Float & [0.0:5.0]  & ayudara para saber que calificación le dio el usuario 			al platillo recomendado  \\
         \midrule
-        Uploaded & On  & Date & 8 & 8 & En que fecha el usuario subió el platillo \\
+        Rated & On  & Date & -  & ayudara a saber en que fecha hizo ese rating \\
+        \midrule
+        Cliked & Last  & Date & -  & La ultima fecha en que visualizo el platillo \\
+        \midrule
+        Cliked & Times  & Int & [1:2\^{ }31-1]  & Las veces en las que a visualizado ese platillo \\
+        \midrule
+        Uploaded & On  & Date & - & En que fecha el usuario subió el platillo \\
         \bottomrule
       \end{tabular}
       \caption{Diccionario de datos}

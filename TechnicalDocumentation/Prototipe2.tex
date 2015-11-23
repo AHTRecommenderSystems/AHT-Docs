@@ -89,7 +89,7 @@
     \end{itemize}
     
   \section{Resultados}
-    Tras definir las acciones realizadas en el prototipo, se realiza el desarrollo del sistema Bonappettit, prototipo del sistema final que permite obtener recomendaciones con filtrado por contenido para usuarios no registrados en la plataforma. Esta plataforma se ve implementada en un sistema web con funcionalidad implementada cuyo estilo visual es posible de apreciar en la figura~\ref{fig: screenshot1 p2}
+    Tras definir las acciones realizadas en el prototipo, se realiza el desarrollo del sistema Bonappettit, prototipo del sistema final que permite obtener recomendaciones con filtrado por contenido para usuarios no registrados en la plataforma. Esta plataforma se ve implementada en un sistema web cuyo estilo visual es posible de apreciar en la figura~\ref{fig: screenshot1 p2}
         \begin{figure}[h!]
           \centering
           \includegraphics[width=16cm]{./images/bonappettit.png}
@@ -97,3 +97,18 @@
           \label{fig: screenshot1 p2}
         \end{figure}
 
+    Así mismo, podemos denotar el resultado de las recomendaciones para un ítem en particular como prueba de la implementación del algoritmo k-NN implementado para reconocer la similitud entre los diversos platillos que se encuentran registrados en el sistema, como se describió en el diseño del prototipo. Debido a la ausencia de usuarios registrados en el sistema, y a la falta de información de restaurantes de una zona en particular, el prototipo se ve limitado a recomendar platillos de acuerdo a sus categorías por filtrado por contenido. Actualmente se cuenta con registro de 843 platillos dentro de la base de datos disponibles para hacer pruebas con las recomendaciones necesarias, se espera este número aumente con el tiempo. Por lo mismo, del modelo de datos propuesto para el caso de estudio en la figura~\ref{fig: data model}, para este prototipo se ve limitado al modelo observado en la figura~\ref{fig:p2 data model} solo permitiendo la recomendación de platillos. Como prueba de su funcionamiento, la figura~\ref{fig: screenshot2 p2} muestra el resultado de la recomendación para la búsqueda de ensaladas, de acuerdo a las características denotadas por las categorías a las que pertenece el primer platillo encontrado. 
+    
+      \begin{figure}[h!]
+          \centering
+          \includegraphics[width=16cm]{./images/p2_model}
+          \caption{Modelo de datos con funcionalidad limitada para el prototipo 2}
+          \label{fig: screenshot2 p2}
+        \end{figure}
+
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=16cm]{./images/recommendations_dish}
+          \caption{Recomendación obtenida para la búsqueda de ensaladas}
+          \label{fig: screenshot2 p2}
+        \end{figure}

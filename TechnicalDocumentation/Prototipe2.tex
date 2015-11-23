@@ -1,4 +1,4 @@
-\chapter{Prototipo 2}
+\chapter{Prototipo 2: Visualizar los datos en recomendaciones por contenido}
   \section{Análisis}
     \subsection{Objetivo}
       Visualizar recomendaciones bajo el filtrado por contenido de los platillos contenidos en el sistema. 
@@ -21,19 +21,21 @@
     Para la implementación de las recomendaciones por contenido, se consideran las categorías que tienen en común. La cantidad de categorías que poseen en común es identificada por una evaluación de similitud. Dicha evaluación genera un conjunto de relaciones con las que es posible determinar los artículos que se parecen más entre sí y obtener los vecinos más cercanos a cada elemento. Así, para los platillos, las categorías a las que pertenecen, permiten crear una vecindad para cada nodo donde es posible obtener cuáles son los platillos vecinos que más se parecen entre sí.
 
     \subsection{Diagrama de clases}
-    Implementando el comportamiento descrito anteriormente se generan las siguientes clases que permiten obtener las recomendaciones por contenido.
+    Implementando el comportamiento descrito anteriormente se generan las clases mostradas en la figura~\ref{fig: diagrama clases p2} que permiten obtener las recomendaciones por contenido. 
           \begin{figure}[h!]
           \centering
           \includegraphics[width=12cm]{./images/p2_classes.png}
           \caption{Diagrama de clases del prototipo 2}
+          \label{fig: diagrama clases p2}
         \end{figure}
 
     \subsection{Casos de uso}
-    Integrando la funcionalidad planteada en las clases anteriores dentro de un sistema web que permita la interacción del usuario se plantean los siguientes casos de uso.
+    Integrando la funcionalidad planteada en las clases anteriores dentro de un sistema web que permita la interacción del usuario se plantean los siguientes casos de uso mostrados en la figura~\ref{fig:CU p2}
     \begin{figure}[h!]
       \centering
       \includegraphics[width=16cm]{./images/prototipo2.png}
       \caption{Casos de uso del prototipo 2}
+      \label{fig:CU p2}
     \end{figure}
     
     \paragraph{CU. Obtener recomendación de platillos\\} 
@@ -77,7 +79,7 @@
     \textbf{Flujo normal}\\
     \begin{itemize}
       \item El sistema muestra el método de entrada para las características de los platillos
-      \item El usuario introduce los parámetros necesarios para registrar el platillo.
+      \item El usuario introduce los parámetros necesarios para registrar el platillo. (Nombre, descripción y categorías a las que pertenece)
       \item El sistema carga la información del platillo al sistema.
     \end{itemize}
     \textbf{Flujo alternativo}\\
@@ -87,10 +89,11 @@
     \end{itemize}
     
   \section{Resultados}
-    Tras definir las acciones realizadas en el prototipo, se realiza el desarrollo del sistema Bonappettit, prototipo del sistema final que permite obtener recomendaciones con filtrado por contenido para usuarios no registrados en la plataforma.
-          \begin{figure}[h!]
+    Tras definir las acciones realizadas en el prototipo, se realiza el desarrollo del sistema Bonappettit, prototipo del sistema final que permite obtener recomendaciones con filtrado por contenido para usuarios no registrados en la plataforma. Esta plataforma se ve implementada en un sistema web con funcionalidad implementada cuyo estilo visual es posible de apreciar en la figura~\ref{fig: screenshot1 p2}
+        \begin{figure}[h!]
           \centering
           \includegraphics[width=16cm]{./images/bonappettit.png}
           \caption{Capturas de pantalla del sistema}
+          \label{fig: screenshot1 p2}
         \end{figure}
 

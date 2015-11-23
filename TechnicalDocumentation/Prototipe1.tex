@@ -1,4 +1,4 @@
-\chapter{Prototipo 1}
+\chapter{Prototipo 1: Obtener y abstraer los datos a utilizar}
   \section{Análisis}
     \subsection{Objetivo}
       Crear el módulo de conexión de datos apropiado para el manejo de la información de acuerdo a un modelo de datos propuesto diseñado por el equipo de trabajo.
@@ -18,19 +18,18 @@
 
   \section{Diseño}
     \subsection{Modelo de datos}
-      Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como se puede apreciar en el siguiente diagrama de grafos.
+      Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como se puede apreciar en la figura~\ref{fig:general_model}.
 
-      \newpage
-          \begin{landscape}
             \begin{figure}[h!]
             \centering
-            \includegraphics[width=22.5cm,height=12cm]{./images/general_data_model.png}
+            \includegraphics[width=16cm]{./images/general_data_model.png}
             \caption{Modelo general necesario para el manejo de la información}
+            \label{fig:general_model}
           \end{figure}
-          \end{landscape}
-        \newpage
 
-      Para la aplicación cliente correspondiente al caso de estudio de recomendación de platillos, el sistema tendrá un modelo de datos que parte del modelo general mínimo necesario para trabajar la información añadiendo información relevante sobre el caso de estudio que recae en platillos como artículos a recomendar. Considerando al final las siguientes entidades.
+      
+  \section{Resultados}
+    Para la aplicación cliente correspondiente al caso de estudio de recomendación de platillos, el sistema tendrá un modelo de datos que parte del modelo general mínimo necesario para trabajar la información añadiendo información relevante sobre el caso de estudio que recae en platillos como artículos a recomendar. Considerando al final las siguientes entidades.
       \begin{itemize}
         \item Platillos
         \item Usuarios
@@ -38,7 +37,7 @@
         \item Categorías
       \end{itemize}
 
-      El siguiente diagrama muestra las entidades utilizadas en el sistema de recomendación de platillos así como las relaciones existentes entre las mismas. En éste los nodos del grafo corresponden a las entidades Usuario, Platillo, Restaurante y Categoría. Donde las relaciones entre ellos se describen de la siguiente manera: 
+      La figura~\ref{fig:data model} muestra las entidades utilizadas en el sistema de recomendación de platillos así como las relaciones existentes entre las mismas. En éste los nodos del grafo corresponden a las entidades Usuario, Platillo, Restaurante y Categoría. Donde las relaciones entre ellos se describen de la siguiente manera: 
       \begin{itemize}
         \item Un platillo puede ser de una o más categorías.
         \item Un platillo puede ser servido en uno o más restaurantes
@@ -52,15 +51,17 @@
           \centering
           \includegraphics[width=22.5cm,height=12cm]{./images/sc_data_model.png}
           \caption{Modelo de datos propuesto para el caso de estudio}
+          \label{fig:data model}
         \end{figure}
       \end{landscape}
 
-  \section{Resultados}
-    Utilizando el modelo propuesto por equipo de trabajo, es posible generar datos de prueba con contenido de platillos así como proponer una serie de categorías que fungirán como características para clasificar los diferentes platillos. Las categorías propuestas se identifican por diferentes rubros como son: tipo de comida, sabor, ocasión, región, salud, temperatura, 
+    Utilizando el modelo propuesto por el equipo de trabajo, es posible generar datos de prueba con contenido de platillos así como proponer una serie de categorías que fungirán como características para clasificar los diferentes platillos. Las categorías propuestas se identifican por diferentes rubros como son: tipo de comida, sabor, ocasión, región, salud, temperatura. Como podemos notarlas en el anexo~\ref{table:categorias}
 
-    Como resultado de la implementación del modelo de datos para el sistema se muestra la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
-            \begin{figure}[h!]
+
+    Como resultado de la implementación del modelo de datos para el sistema, la figura~\ref{fig:neo4j graph} muestra la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
+          \begin{figure}[h!]
             \centering
             \includegraphics[width=12cm]{./images/graph}
             \caption{Modelo de datos implementado para el caso de estudio}
+            \label{fig:neo4j graph}
           \end{figure}

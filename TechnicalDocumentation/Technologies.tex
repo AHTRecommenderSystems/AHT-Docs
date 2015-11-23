@@ -1,6 +1,75 @@
 \section{Tecnologías}
 Para el desarrollo del proyecto se propone utilizar las siguientes tecnologías que permitirán lograr los objetivos propuestos en el sistema. Las ventajas que representan para el desarrollo son descritas a continuación.
-\vspace{-15mm}
+\vspace{10mm}
+	\begin{table}[b!]
+    \centering
+    \vspace{-30mm}
+      \begin{tabular}{|p{2cm}|ll}
+        \hline
+        
+        \multicolumn{2}{|c|}{{\bf Cuadro comparativo de tecnologías}} \\ 
+        \hline
+          \multicolumn{1}{|p{4cm}|}{{\bf Nombre}} & 
+		  \multicolumn{1}{p{10cm}|}{{\bf Características}}\\
+
+        \hline
+          \multicolumn{1}{|p{5cm}|}{Base de datos relacional} & 
+          \multicolumn{2}{p{10cm}|}{\begin{itemize}
+          \vspace{-5mm}
+        \item Es un tipo de base de datos que cumple con el modelo relacional.
+        \item Permite establecer interconexiones o relaciones entre los datos,y a través de dichas conexiones relacionar los datos de ambas tablas, de ahí proviene su nombre: "modelo relacional".
+        \item No pueden existir dos tablas con el mismo nombre ni registro.
+        \item Cada tabla es a su vez un conjunto de campos (columnas) y registros (filas).
+        \item Las claves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la integridad de datos.
+       
+      \end{itemize}} \\
+         
+        \hline
+          \multicolumn{1}{|p{5cm}|}{Bases de datos no relacional} & 
+          \multicolumn{1}{p{10cm}|}{
+          \begin{itemize}
+          \vspace{-5mm}
+          \item Los datos almacenados no requieren estructuras fijas como tablas, normalmente no soportan operaciones JOIN.
+        \item Pueden manejar enormes cantidades de datos.
+        \item No generan cuellos de botella.
+        \item Escalamiento sencillo.
+        \item Se ejecutan en clusters de máquinas baratas.
+        \item No usan SQL como el principal lenguaje de consultas
+      \end{itemize}} \\ 
+       \hline
+       
+      \end{tabular}
+     
+      \label{Cuadro Comparativo}
+    \end{table}
+\newpage
+	\begin{table}[b!]
+    \centering
+    \vspace{-20mm}
+      \begin{tabular}{|p{2cm}|ll}
+        \hline
+        
+          \multicolumn{1}{|p{5cm}|}{Base de datos Orientada a grafos} & 
+          \multicolumn{2}{p{10cm}|}{\begin{itemize}
+          \vspace{-5mm}
+        \item Representa la información como nodos de un grafo y sus relaciones con las aristas del mismo
+        \item Consultas más amplias y no demarcadas por tablas.
+        \item No hay que definir un número determinado de atributos.
+        \item Los registros también son de longitud variable, evitando tener que definir un tamaño y también posibles fallas en la base de datos.
+        \item Se puede recorrer directamente la base de datos de forma jerárquica, obtener el nodo abuelo del nodo y viceversa.
+       
+      \end{itemize}} \\
+         
+        
+       \hline
+       
+      \end{tabular}
+      \caption{Tipos de bases de datos}
+      \label{Cuadro comparativo}
+    \end{table}
+    
+\newpage
+
 	\begin{table}[b!]
     \centering
       \begin{tabular}{|p{2cm}|ll}
@@ -31,7 +100,7 @@ Para el desarrollo del proyecto se propone utilizar las siguientes tecnologías 
         \item Posee almacenamiento en la nube.
         \item Apoyo de consultas en paralelo.
         \item Precios felixibles y opciones de licencia.
-        \item Totalmente transaccional y multi-hilo,
+        \item Totalmente transaccional y multi-hilo.
       \end{itemize}} \\ 
         \hline
           \multicolumn{1}{|p{3cm}|}{\includegraphics[width=0.3\textwidth]{images/InfoGrid}} & 

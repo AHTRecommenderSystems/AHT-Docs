@@ -1,38 +1,49 @@
 \section {Descripción y módulos del sistema}
-% \section{¿Para qué sirve el sistema?}
 
   \subsection{Arquitectura general}
-    \paragraph{Para desarrollar un sistema de recomendacion se han planteado los siguientes módulos funcionales de la API, el cual será utilizado por el desarrollador final para que, en conjunto con su aplicación final realice la integración de las funciones disponibles en el API junto al sistema de recomendación final. Esto se puede denotar en el siguiente diagrama.}
+    Para desarrollar un sistema de recomendación se han planteado los siguientes módulos funcionales de la API, el cual será utilizado por el desarrollador final para que, en conjunto con su aplicación final realice la integración de las funciones disponibles en el API junto al sistema de recomendación final. Esto se puede denotar en el diagrama de la figura~\ref{fig:architecture}
 
 \newpage
     \begin{landscape}
       \begin{figure}[h!]
       \centering
-      \includegraphics[width=22.5cm,height=12cm]{./images/architecture_diagram.jpg}
+      \includegraphics[width=22.5cm,height=12cm]{./images/architecture.png}
       \caption{Diagrama general del sistema}
+      \label{fig:architecture}
     \end{figure}
     \end{landscape}
   \newpage
 
-\paragraph{Cómo se apreciar en el diagrama, el sistema se encuentra dividido en tres módulos básicos además de la aplicación final que hace uso de los módulos de la API.}
+Cómo se puede apreciar en el diagrama, el sistema se encuentra dividido en tres módulos básicos además de la aplicación final que hace uso de los módulos de la API.
     \begin{itemize}
-    \item Módulo de datos
-    \item Módulo de operaciones lógicas
-    \item Módulo de presentación
-    \item Caso de estudio ó aplicación final
+    \item Módulo de obtención datos
+    \item Módulo de evaluación
+    \item Módulo de presentación de resultados
+    \item Aplicación cliente
   \end{itemize}
 
 \subsection{Módulos de la API}
-  \subsubsection{Módulo de abstracción de datos}
-    \paragraph{Este módulo es el encargado de la obtención de datos para su adecuada manipulación dentro de los objetivos del sistema, es decir, permitirá el manejo de los datos estandarizandolos a un modelo de datos base que permitirá tener la funcionalidad del sistema de recomendación de manera adecuada. }
-    \paragraph{Se presenta como un módulo conformado por diferentes interfaces de conexión para fuentes de datos, como pueden ser ficheros de texto o la conexión a un gestor de base de datos. Tiene una interacción directa con el módulo de operaciones lógicas dentro del sistema.}
+  \subsubsection{Módulo de obtención de datos}
+    Este módulo es el encargado de la conexión a una fuente de datos de la cuál obtendrá los datos a utilizar, mapeándolos dentro de una estandarización propuesta por el equipo de trabajo. Esta obtención permitirá tener la funcionalidad del sistema de recomendación de manera adecuada. 
+    Se presenta como un módulo conformado por diferentes interfaces de conexión para fuentes de datos, como lo es un gestor de base de datos. Tiene una interacción directa con el módulo de operaciones lógicas dentro del sistema.
+    Dentro de sus características podemos denotar:
+    \begin{itemize}
+      \item Permite la conexión a una fuente de datos.
+      \item A través de interfaces, permite mapear los datos utilizados en cada caso de estudio para el correcto funcionamiento del módulo de operaciones lógicas.
+      \item Se encuentra restringido al modelo de datos mínimo propuesto por el equipo de trabajo.
+    \end{itemize}
 
   \subsubsection{Módulo de operaciones lógicas}
-    \paragraph{El módulo de operaciones lógicas permitirá, haciendo uso de la información almacenada, obtener recomendaciones y predicciones de los diferentes artículos deacuerdo a diferentes clasificaciones con base en los principales tipos de recomendacion existentes: basados en contenido y colaborativos. Cabe destacar, la constante operación de este módulo para el aprendizaje y mejora constante de las recomendaciones.}
+    El módulo de operaciones lógicas permitirá, haciendo uso de la información almacenada, obtener evaluaciones de los diferentes artículos de acuerdo a diferentes clasificaciones con base en algoritmos de recomendación que definen los principales tipos de recomendación existentes: basados en contenido, colaborativos e híbridos. Estas evaluaciones deberán ser utilizadas por el módulo de presentación de resultados para devolver predicciones o recomendaciones que estén dentro de los rangos de evaluación propuestos por el desarrollador para su caso de estudio. Cabe destacar que este tipo de algoritmos devolverán evaluaciones cuantitativas, y la representación de estos se definirá dependiendo el caso, siendo lo ideal que a un mayor valor corresponda una mayor similitud o preferencia. Dentro de sus características principales encontramos:
+    \begin{itemize}
+      \item Hace uso de la conexión proporcionada por el módulo de datos y los parámetros indicados en el módulo de presentación de resultados para devolver las evaluaciones.
+      \item Las evaluaciones son cuantitativas, denotando idealmente una mayor relevancia para el usuario como un mayor valor.
+      \item El algoritmo de evaluación a utilizar será determinado en la interacción entre éste módulo y el módulo de presentación de resultados.
+    \end{itemize}
 
   \subsubsection{Módulo de presentación}
-    \paragraph{Haciendo uso del módulo de operaciones lógicas, este módulo pretende brindar la funcionalidad de mostrar en forma de reportes tabulares, los resultados obtenidos de la recomendación al ser integrado en la aplicación final.}
+    Haciendo uso del módulo de operaciones lógicas, este módulo pretende interactuar con la aplicación final para brindar las funciones de recomendación y predicción para cada usuario o artículo. 
 
 \subsection{Aplicación final}
   \subsubsection{Definición}
-    \paragraph{En este caso, la aplicación final hará uso de las funciones proporcionadas por los distintos módulos que conforman la API para obtener recomendaciones de los datos que pertenezcan a su caso de estudio. Interactúa directamente con el módulo de abstraccion de datos y con el módulo de presentación para hacer uso de la funcionalidad permitida por el API. En este caso, la aplicación final se verá reflejada en un sistema web que permita denotar la funcionalidad de la API para un conjunto de datos de platillos y restaurantes.}
+    En este caso, la aplicación final hará uso de las funciones proporcionadas por los distintos módulos que conforman la API para obtener recomendaciones de los datos que pertenezcan a su caso de estudio. Interactúa directamente con el módulo de abstracción de datos y con el módulo de presentación para hacer uso de la funcionalidad permitida por el API. En este caso, la aplicación final se verá reflejada en un sistema web que permita denotar la funcionalidad de la API para un conjunto de datos de platillos y restaurantes.

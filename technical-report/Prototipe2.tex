@@ -8,7 +8,7 @@
       \item El sistema permite al usuario visualizar los platillos.
       \item El sistema muestra recomendaciones de acuerdo a un solo platillo, para mostrar los que tienen una mayor similitud con éste.
       \item El sistema permite la interacción de usuarios no registrados para obtener recomendaciones personalizadas con base en los platillos que ha visualizado.
-      \item La evaluación de similitud se logra a través de las categorías en común que tengan los platillos entre sí.
+      \item La evaluación de similitud se logra a través de las características en común que tengan los platillos entre sí.
     \end{itemize}
 
     \subsection{Restricciones}
@@ -18,7 +18,7 @@
     \end{itemize}
 
   \section{Diseño}
-    Para la implementación de las recomendaciones por contenido, se consideran las categorías que tienen en común. La cantidad de categorías que poseen en común es identificada por una evaluación de similitud. Dicha evaluación genera un conjunto de relaciones con las que es posible determinar los artículos que se parecen más entre sí y obtener los vecinos más cercanos a cada elemento. Así, para los platillos, las categorías a las que pertenecen, permiten crear una vecindad para cada nodo donde es posible obtener cuáles son los platillos vecinos que más se parecen entre sí.
+    Para la implementación de las recomendaciones por contenido, se consideran las características que tienen en común. La cantidad de características que poseen en común es identificada por una evaluación de similitud. Dicha evaluación genera un conjunto de relaciones con las que es posible determinar los artículos que se parecen más entre sí y obtener los vecinos más cercanos a cada elemento. Así, para los platillos, las características a las que pertenecen, permiten crear una vecindad para cada nodo donde es posible obtener cuáles son los platillos vecinos que más se parecen entre sí.
 
     \subsection{Diagrama de clases}
     Implementando el comportamiento descrito anteriormente se generan las clases mostradas en la figura~\ref{fig: diagrama clases p2} que permiten obtener las recomendaciones por contenido. 
@@ -79,7 +79,7 @@
     \textbf{Flujo normal}\\
     \begin{itemize}
       \item El sistema muestra el método de entrada para las características de los platillos
-      \item El usuario introduce los parámetros necesarios para registrar el platillo. (Nombre, descripción y categorías a las que pertenece)
+      \item El usuario introduce los parámetros necesarios para registrar el platillo. (Nombre, descripción y características que le describen)
       \item El sistema carga la información del platillo al sistema.
     \end{itemize}
     \textbf{Flujo alternativo}\\
@@ -97,7 +97,7 @@
           \label{fig: screenshot1 p2}
         \end{figure}
 
-    Así mismo, podemos denotar el resultado de las recomendaciones para un ítem en particular como prueba de la implementación del algoritmo k-NN implementado para reconocer la similitud entre los diversos platillos que se encuentran registrados en el sistema, como se describió en el diseño del prototipo. Debido a la ausencia de usuarios registrados en el sistema, y a la falta de información de restaurantes de una zona en particular, el prototipo se ve limitado a recomendar platillos de acuerdo a sus categorías por filtrado por contenido. Actualmente se cuenta con registro de 843 platillos dentro de la base de datos disponibles para hacer pruebas con las recomendaciones necesarias, se espera este número aumente con el tiempo. Por lo mismo, del modelo de datos propuesto para el caso de estudio en la figura~\ref{fig:data model}, para este prototipo se ve limitado al modelo observado en la figura~\ref{fig:p2 db} solo permitiendo la recomendación de platillos. Como prueba de su funcionamiento, la figura~\ref{fig:screenshot2 p2} muestra el resultado de la recomendación para la búsqueda de ensaladas, de acuerdo a las características denotadas por las categorías a las que pertenece el primer platillo encontrado. 
+    Así mismo, podemos denotar el resultado de las recomendaciones para un ítem en particular como prueba de la implementación del algoritmo k-NN implementado para reconocer la similitud entre los diversos platillos que se encuentran registrados en el sistema, como se describió en el diseño del prototipo. Debido a la ausencia de usuarios registrados en el sistema, y a la falta de información de restaurantes de una zona en particular, el prototipo se ve limitado a recomendar platillos de acuerdo a sus características por filtrado por contenido. Actualmente se cuenta con registro de 843 platillos dentro de la base de datos disponibles para hacer pruebas con las recomendaciones necesarias, se espera este número aumente con el tiempo. Por lo mismo, del modelo de datos propuesto para el caso de estudio en la figura~\ref{fig:data model}, para este prototipo se ve limitado al modelo observado en la figura~\ref{fig:p2 db} solo permitiendo la recomendación de platillos. Como prueba de su funcionamiento, la figura~\ref{fig:screenshot2 p2} muestra el resultado de la recomendación para la búsqueda de ensaladas, de acuerdo a las características denotadas por las características a las que pertenece el primer platillo encontrado. 
 
       \begin{figure}[h!]
           \centering

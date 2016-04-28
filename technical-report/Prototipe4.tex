@@ -20,6 +20,8 @@
 
     % Insertar historias de usuario aqui
 
+
+
   \section{Diseño}
 
     Para desarrollar las características mencionadas previamente, se debe tomar en cuenta el modelo de datos propio del caso de estudio que podemos observar en la figura ~\ref{fig:model_cs}
@@ -37,13 +39,13 @@
 
   Para el desarrollo de los servicios web se toma en cuenta lo siguiente:
   \begin{itemize}
-    \item Un directorio llamado "rest". Este directorio contendrá todos los servicios web que son expuestos para consumirlos en el caso de estudio.
-    \item Los subdirectorios. Estos subdirectorios son las clases que hacen referencia a cada entidad del caso de estudio. El nombre del mismo está expresado por el nombre de la clase de dominio a la que hace referencia concatenado con la palaba "ws".
+    \item Un contenedor llamado \"rest\". Este contenedor contendrá todos los servicios web que son expuestos para consumirlos en el caso de estudio.
+    \item Los recursos. Estos recursos son las clases que hacen referencia a cada entidad del caso de estudio. El nombre del mismo está expresado por el nombre de la clase de dominio a la que hace referencia concatenado con la palaba \"ws\".
     \item El conjunto de métodos que contienen las clases de los servicios web. Es decir, cada uno de los recursos contendrá métodos que manejan las operaciones básicas CRUD (Create, Retrieve, Update, Delete y RetrieveAll) para la creación de las entidades de dominio; métodos para la creación de las relaciones existentes entre estas para la generación de las recomendaciones por parte de la API. Y finalmente, se exponen las recomendaciones obtenidas, para que, en conjunto con el caso de estudio, se tenga una mejor apreciación de la funcionalidad de esta API.
     \item Se declara el tipo de respuesta que dan estos servicios y el tipo . Debe ser un formato válido para cualquier dispositivo que consuma estos servicos. El tipo propuesto para este caso de estudio es un JSON válido y bien formado.
   \end{itemize}
 
-  Para el desarrollo de los servicios web se considera lo siguiente: un recurso que identificará a cada una de estas clases, en este caso, la entidad a la que hacen referencia concatenando la palabra "ws" para mayor referencia; así como nombre del recurso que identificará a cada uno de los métodos de esta clase indicado por los métodos que manipulan las cinco operaciones del CRUD (Create, Retrieve, Update, Delete y RetrieveAll). Igualmente para exponer los web services de las recomendaciones, se utliza el nombre de los métodos propios del recomendador. Por último, se debe declarar el tipo de respuesta que tienen estos métodos. Para cada uno de ellos se regresa una respuesta que contiene un JSON; cada uno de los JSON posee un campo llamado success, el cual actua como un indicador de si la operacion fue éxitosa o no.
+  Para el desarrollo de los servicios web se considera lo siguiente: un recurso que identificará a cada una de estas clases, en este caso, la entidad a la que hacen referencia concatenando la palabra \"ws\" para mayor referencia; así como nombre del recurso que identificará a cada uno de los métodos de esta clase indicado por los métodos que manipulan las cinco operaciones del CRUD (Create, Retrieve, Update, Delete y RetrieveAll). Igualmente para exponer los web services de las recomendaciones, se utliza el nombre de los métodos propios del recomendador. Por último, se debe declarar el tipo de respuesta que tienen estos métodos. Para cada uno de ellos se regresa una respuesta que contiene un JSON; cada uno de los JSON posee un campo llamado success, el cual actua como un indicador de si la operacion fue éxitosa o no.
 
   \section{Resultados}
     Utilizando el comportamiento de la API como parte de la funcionalidad del sistema, integrado con las clases de dominio y los servicios diseñados previamente obtenemos la estructura mostrada en el diagrama de clases de la figura~\ref{fig:monster_classes}. 

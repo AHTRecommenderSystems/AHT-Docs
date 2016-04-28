@@ -33,8 +33,12 @@
       \end{figure}
     \end{landscape}
 
-    % explique diseño de servicios aqui.
-  
+  Web Services
+  Se desarrollaron un conjunto de clases para exponer las operaciones básicas de un CRUD de las clases de dominio User, Dish, Category y Restaurant así como para la creación de las relaciones entre estas entidades.
+
+  Estas clases se componen de tres partes importantes: un recurso que identificará a cada una de estas clases, para este caso, se decidió poner el nombre de la entidad a la que hacen referencia y concatenando la palabra ws; la segunda es el nombre del recurso que identificará a cada uno de los métodos de esta clase. Cada uno de estos métodos son POST. Al crear los métodos de esta clase para que manipulara las cinco operaciones del CRUD 
+  (Creat, Retrieve, Update, Delete y RetrieveAll) se decidió utilizar el mismo nombre. Por último, se debe declarar el tipo de respuesta que tienen estos métodos. Para cada uno de ellos se regresa una respuesta que contiene un JSON; cada uno de los JSON posee un campo llamado succes, el cual actua como una bandera para indicar si la operacion fue éxitosa o no.
+
   \section{Resultados}
     Utilizando el comportamiento de la API como parte de la funcionalidad del sistema, integrado con las clases de dominio y los servicios diseñados previamente obtenemos la estructura mostrada en el diagrama de clases de la figura~\ref{fig:monster_classes}. 
 

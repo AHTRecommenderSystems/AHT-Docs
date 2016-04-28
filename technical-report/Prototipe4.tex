@@ -18,9 +18,42 @@
       \item El sistema no permitirá el registro de platillos a usuarios no registrados.
     \end{itemize}
 
-    Las características del prototipo descritas anteriormente pueden ser visualizadas en la figura que muestra los casos de uso del sistema.
+    % Insertar historias de usuario aqui
 
   \section{Diseño}
+
+    Para desarrollar las características mencionadas previamente, se debe tomar en cuenta el modelo de datos propio del caso de estudio que podemos observar en la figura ~\ref{fig:model_cs}
+
+    \begin{landscape}
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[width=25cm]{./images/sc_data_model}
+        \caption{Modelo de datos del caso de estudio}
+        \label{fig:model_cs}
+      \end{figure}
+    \end{landscape}
+
+    % explique diseño de servicios aqui.
   
   \section{Resultados}
-   
+    Utilizando el comportamiento de la API como parte de la funcionalidad del sistema, integrado con las clases de dominio y los servicios diseñados previamente obtenemos la estructura mostrada en el diagrama de clases de la figura~\ref{fig:monster_classes}. 
+
+    \begin{landscape}
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[width=25cm]{./images/monster_class}
+        \caption{Diagrama de clases del prototipo 4}
+        \label{fig:monster_classes}
+      \end{figure}
+    \end{landscape}
+
+    Así finalmente podemos desarrollar el sistema, consumiendo los servicios web proporcionados por el back-end del sistema en una aplicación de angular, que a través de servicios y controladores que siguen el patrón MVC, permiten mostrar los datos en una interfaz gráfica al usuario final, como la mostrada en la figura~\ref{fig:final_bonappettit}
+
+
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[width=16cm]{./images/p4_bonappettit}
+        \caption{Interfaz gráfica del sistema}
+        \label{fig:final_bonappettit}
+      \end{figure}
+

@@ -131,33 +131,35 @@
 \newpage
  \section{Algoritmos de recomendación}
  \subsection{Vecinos próximos (k-NN)}
- 	 Este método selecciona los k vecinos más similares al usuario o al ítem objetivo, de forma que mediante la combinación lineal del rating de los vecinos se realiza una predicción de rating. A partir de esta predicción, podemos sacar el ránking de ítems a recomendar, simplemente ordenándolos por orden descendente del rating predicho. Existe una gran cantidad de variaciones para estos algoritmos, ya que tienen muchos parámetros configurables que dan diferentes resultados dependiendo de los datos con los que se traten. El número k de vecinos, la similitud mínima a considerar como relevante, o el número de ítems en común para una similitud válida son algunos de los parámetros a establecer para estos algoritmos. Los algoritmos de vecinos próximos se han desarrollado en dos perspectivas posibles: recomendación de vecinos próximos por usuario y por ítem.
+ 	 Este método selecciona los k vecinos más similares al usuario o al ítem objetivo, de forma que mediante la combinación lineal del rating de los vecinos se realiza una predicción de rating. A partir de esta predicción, podemos sacar el ránking de ítems a recomendar, simplemente ordenándolos por orden descendente del rating predicho. Existe una gran cantidad de variaciones para estos algoritmos, ya que tienen muchos parámetros configurables que dan diferentes resultados dependiendo de los datos con los que se traten. El número k de vecinos, la similitud mínima a considerar como relevante, o el número de ítems en común para una similitud válida son algunos de los parámetros a establecer para estos algoritmos. Los algoritmos de vecinos próximos se han desarrollado en dos perspectivas posibles: recomendación de vecinos próximos por usuario y por ítem. \cite{41}
  	 \subsubsection{Basado en usuario}
- 	 	Se recomiendan al usuario los ítems que han gustado a usuarios similares a éste. Su fórmula es la siguiente: \\
+ 	 	Se recomiendan al usuario los ítems que han gustado a usuarios similares a éste. Su fórmula es la siguiente:  \cite{41}\\ 
  	 	\includegraphics[width=0.4\textwidth]{images/knn_user}
 
  	 \subsubsection{Basado en item}
- 	 	Se recomiendan al usuario los ítems que se parecen a ítems que le han gustado. Su función es muy similar a la del algoritmo k-NN con usuarios.\\
+ 	 	Se recomiendan al usuario los ítems que se parecen a ítems que le han gustado. Su función es muy similar a la del algoritmo k-NN con usuarios.
+ 	 	\cite{41}\\
+ 	 	
  	 	\includegraphics[width=0.4\textwidth]{images/knn_item}
  	 
  	 Normalmente, este algoritmo se utiliza con el número de vecinos igual al número total de ítems, es decir, que el vecindario de cada ítem son todos los demás existentes en el conjunto de datos. En cuanto a la función de similitud entre los usuarios o ítems, ésta se puede realizar mediante varios métodos, entre ellos destacan: 
  	 \begin{itemize}
- 	 	\item \textbf{Coseno:} Mide el ángulo entre los vectores (ratings) década par de usuarios o ítems, de forma que son más similares aquellos cuyos vectores tienen la misma orientación. \\
+ 	 	\item \textbf{Coseno:} Mide el ángulo entre los vectores (ratings) década par de usuarios o ítems, de forma que son más similares aquellos cuyos vectores tienen la misma orientación.\cite{41} \\
  	 	\includegraphics[width=0.7\textwidth]{images/coseno}
 
- 	 	\item \textbf{Jaccard:} Dos usuarios o ítems son más similares cuanto más parecida sea la intersección a la unión de ambos, es decir, cuantos más ratings en común tengan, independientemente del valor de rating. \\
+ 	 	\item \textbf{Jaccard:} Dos usuarios o ítems son más similares cuanto más parecida sea la intersección a la unión de ambos, es decir, cuantos más ratings en común tengan, independientemente del valor de rating.\cite{41} \\
  	 	\includegraphics[width=0.5\textwidth]{images/jaccard}
 
- 	 	\item \textbf{Pearson:} Equivalente a la similitud por coseno, pero cada rating se centra en la puntuación promedio del usuario (o ítem) correspondiente. Para este caso existen dos versiones dependiendo de la forma de calcular el módulo de v: por intersección, donde se suman los ratings de los ítems que tiene en común con u;y total, donde también se incluyen los ratings de aquellos que u desconoce. \\
+ 	 	\item \textbf{Pearson:} Equivalente a la similitud por coseno, pero cada rating se centra en la puntuación promedio del usuario (o ítem) correspondiente. Para este caso existen dos versiones dependiendo de la forma de calcular el módulo de v: por intersección, donde se suman los ratings de los ítems que tiene en común con u;y total, donde también se incluyen los ratings de aquellos que u desconoce.\cite{41} \\
  	 	\includegraphics[width=0.8\textwidth]{images/pearson}
 
  	 \end{itemize}
 
  	\subsection{Slope One}
-	El filtrado colaborativo es una técnica usada por los Sistemas de Recomendación para combinar las opiniones y pruebas de diferentes usuarios con el fin de obtener recomendaciones personalizadas. Hay al menos dos clases de filtrados colaborativos: las técnicas basadas en usuarios son derivadas de la medición de similitudes entre usuarios, mientras que las técnicas basadas en artículos comparan las valoraciones dadas por distintos usuarios. Slope One es una familia de algoritmos usados para el Filtrado Colaborativo introducida en Slope One Predictors for Online Rating-Based Collaborative Filtering por Daniel Lemire y Anna Maclachlan. Posiblemente, esta es la forma más simple de filtrado colaborativo basado en artículos. Su simplicidad la hace especialmente sencilla de implementar eficientemente mientras que su exactitud está a la par de algoritmos más complejos y costosos.
+	El filtrado colaborativo es una técnica usada por los Sistemas de Recomendación para combinar las opiniones y pruebas de diferentes usuarios con el fin de obtener recomendaciones personalizadas. Hay al menos dos clases de filtrados colaborativos: las técnicas basadas en usuarios son derivadas de la medición de similitudes entre usuarios, mientras que las técnicas basadas en artículos comparan las valoraciones dadas por distintos usuarios. Slope One es una familia de algoritmos usados para el Filtrado Colaborativo introducida en Slope One Predictors for Online Rating-Based Collaborative Filtering por Daniel Lemire y Anna Maclachlan. Posiblemente, esta es la forma más simple de filtrado colaborativo basado en artículos. Su simplicidad la hace especialmente sencilla de implementar eficientemente mientras que su exactitud está a la par de algoritmos más complejos y costosos.\cite{42}
  	
  	\subsection{Factorización de matrices}
- 		A los gustos de los usuarios y las características de los ítems subyace un espacio no visible que realmente determina por qué les gustan los ítems. Hay formalismos matemáticos que nos permiten hacer aflorar este tipo de espacio latente como unas cuantas dimensiones reducidas, sin tener que concretar qué son realmente esas dimensiones, y pudiendo sin embargo generar recomendaciones operando con ellas. La idea es representar tanto los ítems como los usuarios como vectores en un espacio de factores latentes, con una coordenada por factor que representa el grado de afinidad del usuario (o del ítem) hacia ese factor.Este efecto se puede realizar mediante la factorización de matrices representada en la figura~\ref{fig: matrix factorization}, descomponiendo la matriz original de ratings en un producto de varias matrices, dos o tres dependiendo del algoritmo, obteniendo siempre una primera matriz de usuarios por factores y una última de factores por ítems.
+ 		A los gustos de los usuarios y las características de los ítems subyace un espacio no visible que realmente determina por qué les gustan los ítems. Hay formalismos matemáticos que nos permiten hacer aflorar este tipo de espacio latente como unas cuantas dimensiones reducidas, sin tener que concretar qué son realmente esas dimensiones, y pudiendo sin embargo generar recomendaciones operando con ellas. La idea es representar tanto los ítems como los usuarios como vectores en un espacio de factores latentes, con una coordenada por factor que representa el grado de afinidad del usuario (o del ítem) hacia ese factor.Este efecto se puede realizar mediante la factorización de matrices representada en la figura~\ref{fig: matrix factorization}, descomponiendo la matriz original de ratings en un producto de varias matrices, dos o tres dependiendo del algoritmo, obteniendo siempre una primera matriz de usuarios por factores y una última de factores por ítems.\cite{43}
 
  		\begin{figure}[h!]
 		 \centering
@@ -169,30 +171,30 @@
  		De esta forma, se obtienen k factores latentes que establecen un espacio de características común, tanto para los usuarios como para los ítems, permitiendo la comparación directa entre ellos.Así, un usuario da ratings de acuerdo a sus factores latentes y a los factores latentes del ítem.
  		A partir de aquí se ha desarrollado en el área gran cantidad de algoritmos para obtener la factorización de matrices, entre los que destacamos los siguientes:
 
- 		\textbf{pLSA(probabilistic Latent Semantic Analysis):} Divide la matriz de ratings en dos, usuarios por factores y factores por ítems, de forma que su función de ránking equivale a la probabilidad de que el usuario puntúe al ítem según el espacio de factores latentes.\\
+ 		\textbf{pLSA(probabilistic Latent Semantic Analysis):} Divide la matriz de ratings en dos, usuarios por factores y factores por ítems, de forma que su función de ránking equivale a la probabilidad de que el usuario puntúe al ítem según el espacio de factores latentes.\cite{43}\\
  		\includegraphics[width=0.5\textwidth]{images/plsa}
 
-		\textbf{SVD(Singular Value Decomposition):} La factorización de la matriz de ratings genera tres matrices, para lo que se tiene en cuenta todos los ratings, asignándoles un cero a aquellos no conocidos. Se obtienen los vectores de usuario e ítem mediante el producto de las matrices obtenidas según la fórmula que se indica a continuación, de forma que su función de ránking consiste en la multiplicación de los vectores de usuario e ítem,centrado en la media del usuario.\\
+		\textbf{SVD(Singular Value Decomposition):} La factorización de la matriz de ratings genera tres matrices, para lo que se tiene en cuenta todos los ratings, asignándoles un cero a aquellos no conocidos. Se obtienen los vectores de usuario e ítem mediante el producto de las matrices obtenidas según la fórmula que se indica a continuación, de forma que su función de ránking consiste en la multiplicación de los vectores de usuario e ítem,centrado en la media del usuario\cite{43}\\
 		\includegraphics[width=0.5\textwidth]{images/svd}
 
-		\textbf{SVDN(SVD no-empty entries):} Variante del anterior algoritmo en la que se obtienen dos matrices en lugar de tres,se tiene en cuenta únicamente los ratings conocidos, y su función de ránking no se centra en la media del usuario.\\
+		\textbf{SVDN(SVD no-empty entries):} Variante del anterior algoritmo en la que se obtienen dos matrices en lugar de tres,se tiene en cuenta únicamente los ratings conocidos, y su función de ránking no se centra en la media del usuario.\cite{43}\\
 		\includegraphics[width=0.2\textwidth]{images/svdn1}
 
-		En este caso, entonces, el cálculo de dicha función es más inmediato, ya que los vectores de usuario e ítem se corresponden con la fila de la primera matriz y la columna de la segunda respectivamente, por lo que únicamente se multiplican la fila por la columna correspondiente.\\
+		En este caso, entonces, el cálculo de dicha función es más inmediato, ya que los vectores de usuario e ítem se corresponden con la fila de la primera matriz y la columna de la segunda respectivamente, por lo que únicamente se multiplican la fila por la columna correspondiente.\cite{43}\\
 		\includegraphics[width=0.4\textwidth]{images/svdn2}
 
-		\textbf{HSVD(SVD with Hypergraph transformation):} Este método está dirigido a la recomendación de ítems a usuarios nuevos en el sistema, es decir, con poca actividad en el entrenamiento. Por ello, el primer paso del algoritmo consiste en dividir la matriz de ratings en tres: ratings de los usuarios que no están en test, ratings conocidos (de entrenamiento) de los usuarios que están en test, y ratings desconocidos de los usuarios que están en test (lo que se recomendará).
+		\textbf{HSVD(SVD with Hypergraph transformation):} Este método está dirigido a la recomendación de ítems a usuarios nuevos en el sistema, es decir, con poca actividad en el entrenamiento. Por ello, el primer paso del algoritmo consiste en dividir la matriz de ratings en tres: ratings de los usuarios que no están en test, ratings conocidos (de entrenamiento) de los usuarios que están en test, y ratings desconocidos de los usuarios que están en test (lo que se recomendará).\cite{43}
 
-		\textbf{ASVD(Assymetric SVD):} Se trata de la versión asimétrica de SVD, que solo usa la tercera matriz de la descomposición para realizar las recomendaciones.Sigue exactamente los mismos pasos que HSVD, con la diferencia de que no se binariza la matriz de ratings de los usuarios viejos, sino que se utiliza la original con los ratings numéricos.
+		\textbf{ASVD(Assymetric SVD):} Se trata de la versión asimétrica de SVD, que solo usa la tercera matriz de la descomposición para realizar las recomendaciones.Sigue exactamente los mismos pasos que HSVD, con la diferencia de que no se binariza la matriz de ratings de los usuarios viejos, sino que se utiliza la original con los ratings numéricos.\cite{43}
 
 		\subsection{Basados en contenido}
-		Este grupo de algoritmos se basa en la utilización de la descripción o características de cada ítem para realizar sugerencias sin utilizar información de otros usuarios para generar la recomendación. Destacan los algoritmos Rocchio y la implementación del k-NN para este tipo de sistemas de recomendación.
+		Este grupo de algoritmos se basa en la utilización de la descripción o características de cada ítem para realizar sugerencias sin utilizar información de otros usuarios para generar la recomendación. Destacan los algoritmos Rocchio y la implementación del k-NN para este tipo de sistemas de recomendación.\\\\
 .
-		\textbf{Rocchio:} Se basa en el cálculo de centroides para cada usuario, de forma que se obtenga un vector representante para cada uno. Estas clases se corresponderán con las características de los ítems, por ejemplo, en Twitter, las palabras clave del contenido de los tweets. De esta forma, se obtiene para cada usuario un centroide que representa su relación con cada característica. La fórmula para el cálculo de los centroides es la siguiente:\\
+		\textbf{Rocchio:} Se basa en el cálculo de centroides para cada usuario, de forma que se obtenga un vector representante para cada uno. Estas clases se corresponderán con las características de los ítems, por ejemplo, en Twitter, las palabras clave del contenido de los tweets. De esta forma, se obtiene para cada usuario un centroide que representa su relación con cada característica. La fórmula para el cálculo de los centroides es la siguiente:\cite{44}\\
 		\includegraphics[width=\textwidth]{images/rocchio}
 		Una vez se dispone de los centroides, el cálculo de la similitud de los usuarios con cada uno de los ítems se realiza mediante cualquiera de los métodos anteriormente descritos. 
 
-		\textbf{k-NN (ítems):} Para la implementación del k-NN, la estructura de este algoritmo es idéntica a la de filtrado colaborativo del mismo nombre, su única diferencia radica en la forma de calcular la similitud entre los ítems.\\
+		\textbf{k-NN (ítems):} Para la implementación del k-NN, la estructura de este algoritmo es idéntica a la de filtrado colaborativo del mismo nombre, su única diferencia radica en la forma de calcular la similitud entre los ítems.\cite{44}\\
 		\includegraphics[width=0.5\textwidth]{images/knn_items}
 
 		\subsection{Algoritmos no personalizados}

@@ -146,7 +146,7 @@
  	 \begin{itemize}
  	 	\item \textbf{Coseno:} Mide el ángulo entre los vectores (ratings) década par de usuarios o ítems, de forma que son más similares aquellos cuyos vectores tienen la misma orientación.\cite{41} \\
  	 	\includegraphics[width=0.7\textwidth]{images/coseno}
-
+ 	 	\newpage
  	 	\item \textbf{Jaccard:} Dos usuarios o ítems son más similares cuanto más parecida sea la intersección a la unión de ambos, es decir, cuantos más ratings en común tengan, independientemente del valor de rating.\cite{41} \\
  	 	\includegraphics[width=0.5\textwidth]{images/jaccard}
 
@@ -167,9 +167,9 @@
 		 \caption{Descomposición de la matrix en el producto de otras tres}
 		 \label{fig: matrix factorization}
 		\end{figure}
-
+		\newpage
  		De esta forma, se obtienen k factores latentes que establecen un espacio de características común, tanto para los usuarios como para los ítems, permitiendo la comparación directa entre ellos.Así, un usuario da ratings de acuerdo a sus factores latentes y a los factores latentes del ítem.
- 		A partir de aquí se ha desarrollado en el área gran cantidad de algoritmos para obtener la factorización de matrices, entre los que destacamos los siguientes:
+ 		A partir de aquí se ha desarrollado en el área gran cantidad de algoritmos para obtener la factorización de matrices, entre los que destacamos los siguientes:\\
 
  		\textbf{pLSA(probabilistic Latent Semantic Analysis):} Divide la matriz de ratings en dos, usuarios por factores y factores por ítems, de forma que su función de ránking equivale a la probabilidad de que el usuario puntúe al ítem según el espacio de factores latentes.\cite{43}\\
  		\includegraphics[width=0.5\textwidth]{images/plsa}
@@ -182,8 +182,8 @@
 
 		En este caso, entonces, el cálculo de dicha función es más inmediato, ya que los vectores de usuario e ítem se corresponden con la fila de la primera matriz y la columna de la segunda respectivamente, por lo que únicamente se multiplican la fila por la columna correspondiente.\cite{43}\\
 		\includegraphics[width=0.4\textwidth]{images/svdn2}
-
-		\textbf{HSVD(SVD with Hypergraph transformation):} Este método está dirigido a la recomendación de ítems a usuarios nuevos en el sistema, es decir, con poca actividad en el entrenamiento. Por ello, el primer paso del algoritmo consiste en dividir la matriz de ratings en tres: ratings de los usuarios que no están en test, ratings conocidos (de entrenamiento) de los usuarios que están en test, y ratings desconocidos de los usuarios que están en test (lo que se recomendará).\cite{43}
+		\newpage
+		\textbf{HSVD(SVD with Hypergraph transformation):} Este método está dirigido a la recomendación de ítems a usuarios nuevos en el sistema, es decir, con poca actividad en el entrenamiento. Por ello, el primer paso del algoritmo consiste en dividir la matriz de ratings en tres: ratings de los usuarios que no están en test, ratings conocidos (de entrenamiento) de los usuarios que están en test, y ratings desconocidos de los usuarios que están en test (lo que se recomendará).\cite{43}\\
 
 		\textbf{ASVD(Assymetric SVD):} Se trata de la versión asimétrica de SVD, que solo usa la tercera matriz de la descomposición para realizar las recomendaciones.Sigue exactamente los mismos pasos que HSVD, con la diferencia de que no se binariza la matriz de ratings de los usuarios viejos, sino que se utiliza la original con los ratings numéricos.\cite{43}
 
@@ -192,17 +192,17 @@
 .
 		\textbf{Rocchio:} Se basa en el cálculo de centroides para cada usuario, de forma que se obtenga un vector representante para cada uno. Estas clases se corresponderán con las características de los ítems, por ejemplo, en Twitter, las palabras clave del contenido de los tweets. De esta forma, se obtiene para cada usuario un centroide que representa su relación con cada característica. La fórmula para el cálculo de los centroides es la siguiente:\cite{44}\\
 		\includegraphics[width=\textwidth]{images/rocchio}
-		Una vez se dispone de los centroides, el cálculo de la similitud de los usuarios con cada uno de los ítems se realiza mediante cualquiera de los métodos anteriormente descritos. 
+		Una vez se dispone de los centroides, el cálculo de la similitud de los usuarios con cada uno de los ítems se realiza mediante cualquiera de los métodos anteriormente descritos. \\
 
 		\textbf{k-NN (ítems):} Para la implementación del k-NN, la estructura de este algoritmo es idéntica a la de filtrado colaborativo del mismo nombre, su única diferencia radica en la forma de calcular la similitud entre los ítems.\cite{44}\\
 		\includegraphics[width=0.5\textwidth]{images/knn_items}
 
 		\subsection{Algoritmos no personalizados}
-		Estos algoritmos recomiendan items sin conocer ningún dato del usuario, de forma impersonal como su propio nombre indica. 
+		Estos algoritmos recomiendan items sin conocer ningún dato del usuario, de forma impersonal como su propio nombre indica. \\
 
-		\textbf{Popularidad:} Recomienda los ítems por orden de popularidad y, por tanto, da exactamente el mismo ránking a cada uno de los usuarios. Por popularidad de un ítem se entiende el número de usuarios que han interactuado con el ítem en el sistema. Este método puede parecer trivial, pero es sin embargo uno de los más extendidos en escenarios reales.
-
-		\textbf{Random:} Recomienda ítems de manera aleatoria a cada usuario y su precisión está relacionada con la densidad del conjunto de datos. La efectividad de la recomendación aleatoria, medida con una cierta métrica, se puede interpretar como la esperanza del valor de la métrica sobre el conjunto de datos en el que se aplica. \cite{11}
+		\textbf{Popularidad:} Recomienda los ítems por orden de popularidad y, por tanto, da exactamente el mismo ránking a cada uno de los usuarios. Por popularidad de un ítem se entiende el número de usuarios que han interactuado con el ítem en el sistema. Este método puede parecer trivial, pero es sin embargo uno de los más extendidos en escenarios reales.\\
+		\newpage
+		\textbf{Random:} Recomienda ítems de manera aleatoria a cada usuario y su precisión está relacionada con la densidad del conjunto de datos. La efectividad de la recomendación aleatoria, medida con una cierta métrica, se puede interpretar como la esperanza del valor de la métrica sobre el conjunto de datos en el que se aplica. \cite{11}\\\\
 
  \section{Bases de datos orientadas a grafos}
 	Las bases de datos relacionales han existido por muchas décadas y son la tecnología de base de datos de elección para la mayoría de almacenamientos intensivos de datos y aplicaciones de obtención de datos. La obtención generalmente se logra mediante SQL, un lenguaje declarativo de consultas. Los sistemas de bases de datos relacionales son generalmente eficientes a menos que la información contenga muchas relaciones que requieren la unión de tablas grandes. Recientemente ha habido mucho interés en los almacenes de datos que no utilizan SQL exclusivamente, el llamado movimiento NoSQL. Ejemplos de ello son BigTable de Google y Cassandra de Facebook. \cite{7}

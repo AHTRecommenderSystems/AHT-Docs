@@ -15,11 +15,11 @@
       \item El sistema será capaz de obtener recomendaciones de artículos solo que empaten con el modelo propuesto. 
       \item El sistema será capaz de obtener recomendaciones de acuerdo a la funcionalidad desarrollada hasta el momento, siendo capaz de extender su funcionalidad a través de interfaces implementables.
     \end{itemize}
-
+  \newpage
   \section{Diseño}
-  Para la generalización de las recomendaciones sobre cualquier objeto acorde al modelo propuesto, se desarrollaron servicios basados en interfaces que permiten al desarrollador, utilizar la funcionalidad de la API, así como abstraer y modelar los objetos propios del sistema que desean desarrollar. 
+  Para la generalización de las recomendaciones sobre cualquier objeto acorde al modelo propuesto, se desarrollaron servicios basados en interfaces que permiten al desarrollador, utilizar la funcionalidad de la API, así como abstraer y modelar los objetos propios del sistema que desean desarrollar.\\
 
-  Para esto se utilizaron las interfaces Item, Characteristic y User, de las cuales las clases del dominio implementan para modelar cada uno de los comportamientos descritos para cada uno de los tipos de entidad identificados por las interfaces, permitiendo la obtención de los datos para el funcionamiento de la API y a su vez, la manipulación de los mismos en los procesos lógicos desarrollados en la API.
+  Para esto se utilizaron las interfaces Item, Characteristic y User, de las cuales las clases del dominio implementan para modelar cada uno de los comportamientos descritos para cada uno de los tipos de entidad identificados por las interfaces, permitiendo la obtención de los datos para el funcionamiento de la API y a su vez, la manipulación de los mismos en los procesos lógicos desarrollados en la API.\\
 
   Así mismo, para establecer las relaciones existentes entre estas entidades fue necesario establecer las interfaces Event, Neighbor y Affinity. Cada una de estas describe un comportamiento propio de las características de la relación. Como se puede ver en la figura~\ref{fig:p3_interfaces}, estas interfaces planteadas determinan el comportamiento de la API descrito en los párrafos posteriores, modelando las entidades y relaciones de la figura~\ref{fig:p3_general_model}
 

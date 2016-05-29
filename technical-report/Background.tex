@@ -6,7 +6,7 @@
  	\subsection{Técnicas de recomendación}
 	 	La recomendación \emph{colaborativa} es probablemente la más familiar, mayormente implementada y más madura de las tecnologías. Los sistemas de recomendación colaborativos agregan \it{ratings} (evaluaciones) a los objetos, reconocen la similitud entre los usuarios de acuerdo a sus \it{ratings} y generan recomendaciones con base en las comparaciones entre usuarios.
 	 	Las recomendaciones \emph{demográficas} pretenden categorizar al usuario con base en sus atributos personales y hacer recomendaciones de acuerdo a clases demográficas. La representación de la información demográfica en el modelo puede variar enormemente, dependiendo de las necesidades del sistema y de la información que pueda recabar. Las técnicas de recomendación demográficas también utilizan algún tipo de correlación entre los usuarios, pero difieren de las colaborativas en medida de que no requieren de la interacción explícita de los ratings para obtener recomendaciones. 
-	 	Las recomendaciones \emph{basadas en contenido} representan la continuación y crecimiento de las investigaciones sobre filtrado de datos. En un sistema de recomendación basado en contenido, los objetos de interés son definidos por sus características que pueden ser asociadas entre varios objetos. El sistema basado en contenido utiliza la información de los objetos para categorizarlos a través de una correlación entre los objetos y entonces, con base en la interacción del usuario, recomendar objetos similares a aquellos con los que ha interactuado. Los perfiles de usuarios dependen del método de aprendizaje empleado. Han sido usados árboles de decisión, redes neuronales y representaciones basadas en vectores por igual. Este tipo de modelos son de larga duración y solo son actualizados mientras el usuario tiene mayor interacción con los mismos.
+	 	Las recomendaciones \emph{basadas en contenido} representan la continuación y crecimiento de las investigaciones sobre filtrado de datos.\\ En un sistema de recomendación basado en contenido, los objetos de interés son definidos por sus características que pueden ser asociadas entre varios objetos. El sistema basado en contenido utiliza la información de los objetos para categorizarlos a través de una correlación entre los objetos y entonces, con base en la interacción del usuario, recomendar objetos similares a aquellos con los que ha interactuado. Los perfiles de usuarios dependen del método de aprendizaje empleado. Han sido usados árboles de decisión, redes neuronales y representaciones basadas en vectores por igual. Este tipo de modelos son de larga duración y solo son actualizados mientras el usuario tiene mayor interacción con los mismos.
 	 	Por el contrario, las recomendaciones \emph{por utilidad} y \emph{basadas en conocimiento} no pretenden dar soluciones generales a largo plazo sobre sus usuarios, sino que se basan en la evaluación entre la necesidad actual del usuario y el set de opciones disponible. Las recomendaciones basadas en utilidad hacen sugerencias con base en el cómputo de la utilidad que tiene el usuario para cada objeto. Por supuesto, el problema central es como crear una función de utilidad para cada usuario. El beneficio de las recomendaciones basadas en utilidad es que permiten factorizar atributos, haciendo posible elevar la importancia de una característica frente a otra. 
 	 	Los sistemas \emph{basados en conocimiento} pretenden sugerir objetos basados en inferencias acerca de las necesidades del usuario y preferencias. En cierto sentido, se puede decir que todas las técnicas de recomendación hacen algún tipo de inferencia, pero los sistemas basados en conocimiento se distinguen porque tienen conocimiento funcional, de como un artículo en particular puede empatar una necesidad de usuario. El modelo para el perfil de usuario puede ser cualquier estructura de conocimiento que permita la inferencia. \cite{5}
 
@@ -94,7 +94,7 @@
 		 \bottomrule
 			\end{tabular}
 		 \caption{Comparación de las distintas técnicas de recomendación}
-	 	 \label{table: comparando tecnicas de recomendacion}
+	 	 \label{table: comparando tecnicas de recomendacion}\cite{5}
 	 	\end{center}
 		\end{table}
 
@@ -124,9 +124,9 @@
 		 \bottomrule
 			\end{tabular}
 		 \caption{Sistemas híbridos}
-	 	 \label{table: sistemas hibridos}
+	 	 \label{table: sistemas hibridos}\cite{5}
 	 	\end{center}
-		\end{table}\cite{5}
+		\end{table}
 
 \newpage
  \section{Algoritmos de recomendación}
@@ -159,7 +159,7 @@
 	El filtrado colaborativo es una técnica usada por los Sistemas de Recomendación para combinar las opiniones y pruebas de diferentes usuarios con el fin de obtener recomendaciones personalizadas. Hay al menos dos clases de filtrados colaborativos: las técnicas basadas en usuarios son derivadas de la medición de similitudes entre usuarios, mientras que las técnicas basadas en artículos comparan las valoraciones dadas por distintos usuarios. Slope One es una familia de algoritmos usados para el Filtrado Colaborativo introducida en Slope One Predictors for Online Rating-Based Collaborative Filtering por Daniel Lemire y Anna Maclachlan. Posiblemente, esta es la forma más simple de filtrado colaborativo basado en artículos. Su simplicidad la hace especialmente sencilla de implementar eficientemente mientras que su exactitud está a la par de algoritmos más complejos y costosos.\cite{42}
  	
  	\subsection{Factorización de matrices}
- 		A los gustos de los usuarios y las características de los ítems subyace un espacio no visible que realmente determina por qué les gustan los ítems. Hay formalismos matemáticos que nos permiten hacer aflorar este tipo de espacio latente como unas cuantas dimensiones reducidas, sin tener que concretar qué son realmente esas dimensiones, y pudiendo sin embargo generar recomendaciones operando con ellas. La idea es representar tanto los ítems como los usuarios como vectores en un espacio de factores latentes, con una coordenada por factor que representa el grado de afinidad del usuario (o del ítem) hacia ese factor.Este efecto se puede realizar mediante la factorización de matrices representada en la figura~\ref{fig: matrix factorization}, descomponiendo la matriz original de ratings en un producto de varias matrices, dos o tres dependiendo del algoritmo, obteniendo siempre una primera matriz de usuarios por factores y una última de factores por ítems.\cite{43}
+ 		A los gustos de los usuarios y las características de los ítems subyace un espacio no visible que realmente determina por qué les gustan los ítems. Hay formalismos matemáticos que nos permiten hacer aflorar este tipo de espacio latente como unas cuantas dimensiones reducidas, sin tener que concretar qué son realmente esas dimensiones, y pudiendo sin embargo generar recomendaciones operando con ellas. La idea es representar tanto los ítems como los usuarios como vectores en un espacio de factores latentes, con una coordenada por factor que representa el grado de afinidad del usuario (o del ítem) hacia ese factor.Este efecto se puede realizar mediante la factorización de matrices representada (en la figura~\ref{fig: matrix factorization}), descomponiendo la matriz original de ratings en un producto de varias matrices, dos o tres dependiendo del algoritmo, obteniendo siempre una primera matriz de usuarios por factores y una última de factores por ítems.\cite{43}
 
  		\begin{figure}[h!]
 		 \centering

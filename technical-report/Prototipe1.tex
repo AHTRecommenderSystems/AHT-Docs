@@ -1,66 +1,66 @@
 \chapter{Prototipo 1: Obtener y abstraer los datos a utilizar}
-  \section{Análisis}
-    \subsection{Objetivo}
-      Crear el módulo de conexión de datos apropiado para el manejo de la información de acuerdo a un modelo de datos propuesto diseñado por el equipo de trabajo.
+\section{Análisis}
+\subsection{Objetivo}
+Crear el módulo de conexión de datos apropiado para el manejo de la información de acuerdo a un modelo de datos propuesto diseñado por el equipo de trabajo.
 
-    \subsection{Características}
-      \begin{itemize}
-        \item El modelo de datos propuesto deberá satisfacer las necesidades para trabajar con diferentes artículos y la interacción con sus usuarios.
-        \item El sistema deberá permitir la conexión a la fuente de datos que corresponda con el modelo propuesto.
-        \item El sistema deberá ser capaz de realizar operaciones sobre los datos de la fuente para el correcto funcionamiento de los procesos lógicos del sistema.
-      \end{itemize}
+\subsection{Características}
+\begin{itemize}
+	\item El modelo de datos propuesto deberá satisfacer las necesidades para trabajar con diferentes artículos y la interacción con sus usuarios.
+	\item El sistema deberá permitir la conexión a la fuente de datos que corresponda con el modelo propuesto.
+	\item El sistema deberá ser capaz de realizar operaciones sobre los datos de la fuente para el correcto funcionamiento de los procesos lógicos del sistema.
+\end{itemize}
 
-    \subsection{Restricciones}
-      \begin{itemize}
-        \item El sistema se verá limitado por el lenguaje de desarrollo Java.
-        \item Para el caso de estudio, el sistema operará con el gestor de base de datos propio de Neo4j. 
-      \end{itemize}
+\subsection{Restricciones}
+\begin{itemize}
+	\item El sistema se verá limitado por el lenguaje de desarrollo Java.
+	\item Para el caso de estudio, el sistema operará con el gestor de base de datos propio de Neo4j. 
+\end{itemize}
 
-  \section{Diseño}
-    \subsection{Modelo de datos}
-      Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como se puede apreciar en la figura~\ref{fig:general_model}.
+\section{Diseño}
+\subsection{Modelo de datos}
+Para la API, el problema fundamental recae en que las recomendaciones pueden ser utilizadas para diversos casos de estudio, buscando una generalización de las características mínimas requeridas para realizar recomendaciones se plantea un modelo de datos utilizando tres principales entidades: Usuarios, Artículos a recomendar, y Categorías como características que permitan clasificar los diferentes artículos. La información que será guardada y posteriormente consultada por otros módulos del sistema seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de evaluaciones básicas generadas en prácticamente cualquier tipo de artículos, películas, platillos, libros, entre otros como se puede apreciar en la figura~\ref{fig:general_model}.
 
-            \begin{figure}[h!]
-            \centering
-            \includegraphics[width=16cm]{./images/general_data_model.png}
-            \caption{Modelo general necesario para el manejo de la información}
-            \label{fig:general_model}
-          \end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=16cm]{./images/general_data_model.png}
+	\caption{Modelo general necesario para el manejo de la información}
+	\label{fig:general_model}
+\end{figure}
 
       
-  \section{Resultados}
-    Para la aplicación cliente correspondiente al caso de estudio de recomendación de platillos, el sistema tendrá un modelo de datos que parte del modelo general mínimo necesario para trabajar la información añadiendo información relevante sobre el caso de estudio que recae en platillos como artículos a recomendar. Considerando al final las siguientes entidades.
-      \begin{itemize}
-        \item Platillos
-        \item Usuarios
-        \item Restaurantes
-        \item Categorías
-      \end{itemize}
+\section{Resultados}
+Para la aplicación cliente correspondiente al caso de estudio de recomendación de platillos, el sistema tendrá un modelo de datos que parte del modelo general mínimo necesario para trabajar la información añadiendo información relevante sobre el caso de estudio que recae en platillos como artículos a recomendar. Considerando al final las siguientes entidades.
+\begin{itemize}
+	\item Platillos
+	\item Usuarios
+	\item Restaurantes
+	\item Categorías
+\end{itemize}
 
-      La figura~\ref{fig:data model} muestra las entidades utilizadas en el sistema de recomendación de platillos así como las relaciones existentes entre las mismas. En éste los nodos del grafo corresponden a las entidades Usuario, Platillo, Restaurante y Categoría. Donde las relaciones entre ellos se describen de la siguiente manera: 
-      \begin{itemize}
-        \item Un platillo puede ser de una o más categorías.
-        \item Un platillo puede ser servido en uno o más restaurantes
-        \item Un usuario puede agregar un platillo
-        \item Un usuario puede interactuar con un platillo a través de un conteo de clics.
-        \item Un usuario puede evaluar qué tanto le gustó un platillo a través de un rating cuantitativo.
-      \end{itemize} 
+La figura~\ref{fig:data model} muestra las entidades utilizadas en el sistema de recomendación de platillos así como las relaciones existentes entre las mismas. En éste los nodos del grafo corresponden a las entidades Usuario, Platillo, Restaurante y Categoría. Donde las relaciones entre ellos se describen de la siguiente manera: 
+\begin{itemize}
+	\item Un platillo puede ser de una o más categorías.
+	\item Un platillo puede ser servido en uno o más restaurantes
+	\item Un usuario puede agregar un platillo
+	\item Un usuario puede interactuar con un platillo a través de un conteo de clics.
+	\item Un usuario puede evaluar qué tanto le gustó un platillo a través de un rating cuantitativo.
+\end{itemize} 
 
-      \begin{landscape}
-        \begin{figure}[h!]
-          \centering
-          \includegraphics[width=22.5cm,height=12cm]{./images/sc_data_model.png}
-          \caption{Modelo de datos propuesto para el caso de estudio}
-          \label{fig:data model}
-        \end{figure}
-      \end{landscape}
+\begin{landscape}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=22.5cm,height=12cm]{./images/sc_data_model.png}
+		\caption{Modelo de datos propuesto para el caso de estudio}
+		\label{fig:data model}
+	\end{figure}
+\end{landscape}
 
-    Utilizando el modelo propuesto por el equipo de trabajo, es posible generar datos de prueba con contenido de platillos así como proponer una serie de categorías que fungirán como características para clasificar los diferentes platillos. Las categorías propuestas se identifican por diferentes rubros como son: tipo de comida, sabor, ocasión, región, salud, temperatura, como podemos notarlas en el anexo~\ref{table:caracteristicas}.\cite{23,24} \\
+Utilizando el modelo propuesto por el equipo de trabajo, es posible generar datos de prueba con contenido de platillos así como proponer una serie de categorías que fungirán como características para clasificar los diferentes platillos. Las categorías propuestas se identifican por diferentes rubros como son: tipo de comida, sabor, ocasión, región, salud, temperatura, como podemos notarlas en el anexo~\ref{table:caracteristicas}.\cite{23,24} \\
 
-    Como resultado de la implementación del modelo de datos para el sistema, se obtuvieron datos utilizando la técnica de web-scrapping para obtener información de platillos de prueba. La figura~\ref{fig:neo4j graph} muestra la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=12cm]{./images/graph}
-            \caption{Modelo de datos implementado para el caso de estudio}
-            \label{fig:neo4j graph}
-          \end{figure}
+Como resultado de la implementación del modelo de datos para el sistema, se obtuvieron datos utilizando la técnica de web-scrapping para obtener información de platillos de prueba. La figura~\ref{fig:neo4j graph} muestra la siguiente representación gráfica del modelo utilizado en el caso de estudio. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{./images/graph}
+	\caption{Modelo de datos implementado para el caso de estudio}
+	\label{fig:neo4j graph}
+\end{figure}
